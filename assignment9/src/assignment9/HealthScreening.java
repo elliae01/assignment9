@@ -4,7 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-public class HealthScreen {
+public class HealthScreening {
 
 	private JFrame frame;
 
@@ -15,7 +15,7 @@ public class HealthScreen {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					HealthScreen window = new HealthScreen();
+					HealthScreening window = new HealthScreening();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -27,7 +27,7 @@ public class HealthScreen {
 	/**
 	 * Create the application.
 	 */
-	public HealthScreen() {
+	public HealthScreening() {
 		initialize();
 	}
 
