@@ -25,7 +25,7 @@ public class HealthScreening {
 	}
 
 	/**
-	 * Create the application.
+	 * Create the application..
 	 */
 	public HealthScreening() {
 		initialize();
