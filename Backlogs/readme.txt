@@ -1,1 +1,0 @@
-Sprint and product backlog
