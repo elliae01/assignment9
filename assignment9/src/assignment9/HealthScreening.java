@@ -76,7 +76,7 @@ public class HealthScreening {
 		BMI.setColumns(10);
 		
 		JLabel lblPatientName = new JLabel("Name");
-		lblPatientName.setBounds(135, 57, 27, 14);
+		lblPatientName.setBounds(128, 57, 34, 14);
 		frame.getContentPane().add(lblPatientName);
 		
 		JLabel lblDate = new JLabel("Date");
@@ -88,11 +88,11 @@ public class HealthScreening {
 		frame.getContentPane().add(lblAge);
 		
 		JLabel lblTotalCholesteral = new JLabel("Total Cholesteral");
-		lblTotalCholesteral.setBounds(76, 150, 86, 14);
+		lblTotalCholesteral.setBounds(63, 150, 97, 14);
 		frame.getContentPane().add(lblTotalCholesteral);
 		
 		JLabel lblBodyMassIndex = new JLabel("Body Mass Index");
-		lblBodyMassIndex.setBounds(76, 181, 86, 14);
+		lblBodyMassIndex.setBounds(63, 181, 97, 14);
 		frame.getContentPane().add(lblBodyMassIndex);
 		
 		BP = new JTextField();
@@ -101,7 +101,7 @@ public class HealthScreening {
 		BP.setColumns(10);
 		
 		JLabel lblBloodPressure = new JLabel("Blood Pressure");
-		lblBloodPressure.setBounds(91, 212, 71, 14);
+		lblBloodPressure.setBounds(73, 212, 89, 14);
 		frame.getContentPane().add(lblBloodPressure);
 		
 		JLabel lblPatientHealthScreening = new JLabel("Patient Health Screening");
