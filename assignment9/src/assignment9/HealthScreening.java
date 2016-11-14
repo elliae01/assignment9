@@ -11,12 +11,12 @@ import javax.swing.JButton;
 public class HealthScreening {
 
 	private JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
+	private JTextField name;
+	private JTextField date;
+	private JTextField age;
+	private JTextField totalC;
+	private JTextField BMI;
+	private JTextField BP;
 
 	/**
 	 * Launch the application.
@@ -50,30 +50,30 @@ public class HealthScreening {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(172, 54, 86, 20);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		name = new JTextField();
+		name.setBounds(172, 54, 86, 20);
+		frame.getContentPane().add(name);
+		name.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(172, 85, 86, 20);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		date = new JTextField();
+		date.setBounds(172, 85, 86, 20);
+		frame.getContentPane().add(date);
+		date.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(172, 116, 86, 20);
-		frame.getContentPane().add(textField_2);
-		textField_2.setColumns(10);
+		age = new JTextField();
+		age.setBounds(172, 116, 86, 20);
+		frame.getContentPane().add(age);
+		age.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(172, 147, 86, 20);
-		frame.getContentPane().add(textField_3);
-		textField_3.setColumns(10);
+		totalC = new JTextField();
+		totalC.setBounds(172, 147, 86, 20);
+		frame.getContentPane().add(totalC);
+		totalC.setColumns(10);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(172, 178, 86, 20);
-		frame.getContentPane().add(textField_4);
-		textField_4.setColumns(10);
+		BMI = new JTextField();
+		BMI.setBounds(172, 178, 86, 20);
+		frame.getContentPane().add(BMI);
+		BMI.setColumns(10);
 		
 		JLabel lblPatientName = new JLabel("Name");
 		lblPatientName.setBounds(135, 57, 27, 14);
@@ -95,10 +95,10 @@ public class HealthScreening {
 		lblBodyMassIndex.setBounds(76, 181, 86, 14);
 		frame.getContentPane().add(lblBodyMassIndex);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(172, 209, 86, 20);
-		frame.getContentPane().add(textField_5);
-		textField_5.setColumns(10);
+		BP = new JTextField();
+		BP.setBounds(172, 209, 86, 20);
+		frame.getContentPane().add(BP);
+		BP.setColumns(10);
 		
 		JLabel lblBloodPressure = new JLabel("Blood Pressure");
 		lblBloodPressure.setBounds(91, 212, 71, 14);
