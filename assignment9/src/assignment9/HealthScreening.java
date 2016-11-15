@@ -17,6 +17,7 @@ public class HealthScreening {
 	private JTextField totalC;
 	private JTextField BMI;
 	private JTextField BP;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -46,7 +47,7 @@ public class HealthScreening {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 431, 300);
+		frame.setBounds(100, 100, 431, 352);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -91,17 +92,17 @@ public class HealthScreening {
 		lblTotalCholesteral.setBounds(63, 150, 97, 14);
 		frame.getContentPane().add(lblTotalCholesteral);
 		
-		JLabel lblBodyMassIndex = new JLabel("Body Mass Index");
-		lblBodyMassIndex.setBounds(63, 181, 97, 14);
+		JLabel lblBodyMassIndex = new JLabel("Weight");
+		lblBodyMassIndex.setBounds(113, 181, 49, 14);
 		frame.getContentPane().add(lblBodyMassIndex);
 		
 		BP = new JTextField();
-		BP.setBounds(172, 209, 86, 20);
+		BP.setBounds(172, 240, 86, 20);
 		frame.getContentPane().add(BP);
 		BP.setColumns(10);
 		
 		JLabel lblBloodPressure = new JLabel("Blood Pressure");
-		lblBloodPressure.setBounds(73, 212, 89, 14);
+		lblBloodPressure.setBounds(63, 243, 89, 14);
 		frame.getContentPane().add(lblBloodPressure);
 		
 		JLabel lblPatientHealthScreening = new JLabel("Patient Health Screening");
@@ -111,7 +112,16 @@ public class HealthScreening {
 		
 		JButton btnSubmit = new JButton("Submit");
 		btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btnSubmit.setBounds(305, 227, 89, 23);
+		btnSubmit.setBounds(172, 279, 89, 23);
 		frame.getContentPane().add(btnSubmit);
+		
+		textField = new JTextField();
+		textField.setBounds(172, 209, 86, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblHeight = new JLabel("Height");
+		lblHeight.setBounds(113, 212, 49, 14);
+		frame.getContentPane().add(lblHeight);
 	}
 }
