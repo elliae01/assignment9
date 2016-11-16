@@ -99,7 +99,7 @@ public class HealthScreening {
 		frame.getContentPane().add(lblTotalCholesteral);
 		
 		JLabel lblBodyMassIndex = new JLabel("Weight");
-		lblBodyMassIndex.setBounds(113, 181, 49, 14);
+		lblBodyMassIndex.setBounds(123, 181, 49, 14);
 		frame.getContentPane().add(lblBodyMassIndex);
 		
 		BP = new JTextField();
@@ -108,7 +108,7 @@ public class HealthScreening {
 		BP.setColumns(10);
 		
 		JLabel lblBloodPressure = new JLabel("Blood Pressure");
-		lblBloodPressure.setBounds(63, 243, 89, 14);
+		lblBloodPressure.setBounds(73, 243, 89, 14);
 		frame.getContentPane().add(lblBloodPressure);
 		
 		JLabel lblPatientHealthScreening = new JLabel("Patient Health Screening");
@@ -127,7 +127,7 @@ public class HealthScreening {
 		textField.setColumns(10);
 		
 		JLabel lblHeight = new JLabel("Height");
-		lblHeight.setBounds(113, 212, 49, 14);
+		lblHeight.setBounds(123, 212, 39, 14);
 		frame.getContentPane().add(lblHeight);
 		
 		btnSubmit.addActionListener(new ActionListener() {
