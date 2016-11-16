@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.Writer;
 
 import javax.swing.JButton;
+import java.awt.Color;
 
 public class HealthScreening {
 
@@ -63,6 +64,10 @@ public class HealthScreening {
 		name.setColumns(10);
 		
 		date = new JTextField();
+		date.setEnabled(false);
+		date.setDisabledTextColor(Color.LIGHT_GRAY);
+		date.setForeground(Color.LIGHT_GRAY);
+		date.setSelectedTextColor(Color.LIGHT_GRAY);
 		date.setBounds(172, 85, 86, 20);
 		frame.getContentPane().add(date);
 		date.setColumns(10);
