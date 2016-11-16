@@ -6,6 +6,12 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
+
 import javax.swing.JButton;
 
 public class HealthScreening {
@@ -123,5 +129,28 @@ public class HealthScreening {
 		JLabel lblHeight = new JLabel("Height");
 		lblHeight.setBounds(113, 212, 49, 14);
 		frame.getContentPane().add(lblHeight);
+		
+		btnSubmit.addActionListener(new ActionListener() {
+
+
+			public void actionPerformed(ActionEvent e) {
+				
+				String []data={name.getText(),age.getText(),totalC.getText(),BP.getText()};
+				try {
+					Writer fileWriter = new FileWriter("out.txt");
+					for(int i=0; i < data.length; i++)
+					{
+					fileWriter.write(data[i]+"\r\n");
+					}
+					fileWriter.close();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				
+				
+			}
+		});
 	}
 }
