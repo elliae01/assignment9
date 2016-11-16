@@ -142,7 +142,7 @@ public class HealthScreening {
 				
 				String []data={name.getText(),age.getText(),totalC.getText(),BP.getText()};
 				try {
-					Writer fileWriter = new FileWriter("out.txt");
+					Writer fileWriter = new FileWriter(date.getText()+"out.txt");
 					
 					for(int i=0; i < data.length; i++){
 						fileWriter.write(data[i]+"\r\n");
