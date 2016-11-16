@@ -143,10 +143,11 @@ public class HealthScreening {
 				String []data={name.getText(),age.getText(),totalC.getText(),BP.getText()};
 				try {
 					Writer fileWriter = new FileWriter("out.txt");
-					for(int i=0; i < data.length; i++)
-					{
-					fileWriter.write(data[i]+"\r\n");
+					
+					for(int i=0; i < data.length; i++){
+						fileWriter.write(data[i]+"\r\n");
 					}
+					
 					fileWriter.close();
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
