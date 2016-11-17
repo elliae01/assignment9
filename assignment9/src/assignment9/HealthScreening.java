@@ -1,5 +1,6 @@
 package assignment9;
 
+import java.awt.Component;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,12 +9,17 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
-import java.awt.Color;
+import javax.swing.JFileChooser;
 
 public class HealthScreening {
 
@@ -64,10 +70,6 @@ public class HealthScreening {
 		name.setColumns(10);
 		
 		date = new JTextField();
-		date.setEnabled(false);
-		date.setDisabledTextColor(Color.LIGHT_GRAY);
-		date.setForeground(Color.LIGHT_GRAY);
-		date.setSelectedTextColor(Color.LIGHT_GRAY);
 		date.setBounds(172, 85, 86, 20);
 		frame.getContentPane().add(date);
 		date.setColumns(10);
@@ -104,7 +106,7 @@ public class HealthScreening {
 		frame.getContentPane().add(lblTotalCholesteral);
 		
 		JLabel lblBodyMassIndex = new JLabel("Weight");
-		lblBodyMassIndex.setBounds(123, 181, 49, 14);
+		lblBodyMassIndex.setBounds(113, 181, 49, 14);
 		frame.getContentPane().add(lblBodyMassIndex);
 		
 		BP = new JTextField();
@@ -113,7 +115,7 @@ public class HealthScreening {
 		BP.setColumns(10);
 		
 		JLabel lblBloodPressure = new JLabel("Blood Pressure");
-		lblBloodPressure.setBounds(73, 243, 89, 14);
+		lblBloodPressure.setBounds(63, 243, 89, 14);
 		frame.getContentPane().add(lblBloodPressure);
 		
 		JLabel lblPatientHealthScreening = new JLabel("Patient Health Screening");
@@ -132,8 +134,12 @@ public class HealthScreening {
 		textField.setColumns(10);
 		
 		JLabel lblHeight = new JLabel("Height");
-		lblHeight.setBounds(123, 212, 39, 14);
+		lblHeight.setBounds(113, 212, 49, 14);
 		frame.getContentPane().add(lblHeight);
+		
+		JButton btnPrintSummary = new JButton("Print Summary");
+		btnPrintSummary.setBounds(271, 280, 134, 23);
+		frame.getContentPane().add(btnPrintSummary);
 		
 		btnSubmit.addActionListener(new ActionListener() {
 
@@ -142,19 +148,59 @@ public class HealthScreening {
 				
 				String []data={name.getText(),age.getText(),totalC.getText(),BP.getText()};
 				try {
-					Writer fileWriter = new FileWriter(date.getText()+"out.txt");
-					
-					for(int i=0; i < data.length; i++){
-						fileWriter.write(data[i]+"\r\n");
+					Writer fileWriter = new FileWriter(".//bin//"+date.getText()+"out.txt",true);
+					for(int i=0; i < data.length; i++)
+					{
+					fileWriter.append(data[i]+"\r\n");
 					}
-					
 					fileWriter.close();
 				} catch (IOException e1) {
-					// TODO Auto-generated catch block.
+					// TODO Auto-generated catch block
 					e1.printStackTrace();
+				}	
+			}
+		});
+		btnPrintSummary.addActionListener(new ActionListener() {
+
+
+			public void actionPerformed(ActionEvent e) {
+				JFileChooser fileChooser = new JFileChooser();
+				fileChooser.setCurrentDirectory(new java.io.File(".//bin"));
+				int result = fileChooser.showOpenDialog(null);
+				File selectedFile = null;
+				if (result == JFileChooser.APPROVE_OPTION) {
+				    selectedFile = fileChooser.getSelectedFile();
+				    System.out.println("Selected file: " + selectedFile.getAbsolutePath());
 				}
+				else if (result == JFileChooser.CANCEL_OPTION) {
+				    System.out.println("Cancel was selected");
+				    System.exit(0);
+				}
+				else if(selectedFile ==null){
+					System.out.println("no file selected");
+					System.exit(0);
+				}
+				String[]data = null;
 				
+				try {
+					BufferedReader br = new BufferedReader(new FileReader(selectedFile));
+				    //StringBuilder sb = new StringBuilder();
+				    String line;
+				    int i=0;
+				    List<String> list = new ArrayList<String>();
+				    while((line = br.readLine()) != null){
+				        list.add(line);
+				        System.out.println(line);
+				    }
+
+				    String[] stringArr = list.toArray(new String[0]);
+				    System.out.println(stringArr[1]);
+				    br.close();
+		
+				} catch (IOException e1) {
 				
+					e1.printStackTrace();
+				}	
 				
 			}
 		});
