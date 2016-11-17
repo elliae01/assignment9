@@ -2,13 +2,13 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="C:/Users/aaron/git14/assignment9/axis.jar"/>
-	<classpathentry kind="lib" path="C:/Users/aaron/git14/assignment9/bmi-service.jar"/>
-	<classpathentry kind="lib" path="C:/Users/aaron/git14/assignment9/commons-discovery-0.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/aaron/git14/assignment9/googlechartwrapper_1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/aaron/git14/assignment9/javax.wsdl_1.6.2.v201012040545.jar"/>
-	<classpathentry kind="lib" path="C:/Users/aaron/git14/assignment9/jaxrpc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/aaron/git14/assignment9/org.apache.commons.logging_1.0.4.v201101211617.jar"/>
-	<classpathentry kind="lib" path="C:/Users/aaron/git14/assignment9/saaj.jar"/>
+	<classpathentry kind="lib" path="axis.jar"/>
+	<classpathentry kind="lib" path="bmi-service.jar"/>
+	<classpathentry kind="lib" path="commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="googlechartwrapper_1.1.jar"/>
+	<classpathentry kind="lib" path="javax.wsdl_1.6.2.v201012040545.jar"/>
+	<classpathentry kind="lib" path="jaxrpc.jar"/>
+	<classpathentry kind="lib" path="org.apache.commons.logging_1.0.4.v201101211617.jar"/>
+	<classpathentry kind="lib" path="saaj.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
