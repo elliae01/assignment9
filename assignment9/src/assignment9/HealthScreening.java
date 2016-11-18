@@ -182,7 +182,7 @@ public class HealthScreening {
 		btnExport.setBounds(259, 305, 89, 23);
 		frmGlenview.getContentPane().add(btnExport);
 		
-	       DateFormat df = new SimpleDateFormat("MM_dd_yyyy");
+	       DateFormat df = new SimpleDateFormat("MM-dd-yyyy");
 	       Calendar calobj = Calendar.getInstance();
 	       //System.out.println(df.format(calobj.getTime()));
 	       date.setText(df.format(calobj.getTime()));
