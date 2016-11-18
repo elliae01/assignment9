@@ -6,11 +6,14 @@ public class PatientClassification {
 	String[]bloodpressure;
 	
 	public PatientClassification(){
-		
+	cholesterol=new String[]{"DESIRABLE","BORDERLINE HIGH","HIGH"};
+	BMI=new String[]{"UNDERWEIGHT","NORMAL","OVERWEIGHT","OBESE"};
+	bloodpressure=new String[]{"NORMAL","PREHYPERTENSION","STAGE 1 HYPERTENSION",
+			"STAGE 2 HYPERTENSION","HYPERTENSIVE CRISIS"};
 	}
 
 	public String Cholesterol(int calc){
-		cholesterol=new String[]{"DESIRABLE","BORDERLINE HIGH","HIGH"};
+		
 			if(calc<200&&calc>0){
 				return cholesterol[0];
 			}
@@ -24,7 +27,7 @@ public class PatientClassification {
 			}	
 	}
 	public String BMI(double calc){
-		BMI=new String[]{"UNDERWEIGHT","NORMAL","OVERWEIGHT","OBESE"};
+
 		if(calc<18.5&&calc>0){
 			return BMI[0];
 		}
@@ -41,8 +44,7 @@ public class PatientClassification {
 		}
 	}
 	public String bloodPressure(int sys,int dias){
-		bloodpressure=new String[]{"NORMAL","PREHYPERTENSION","STAGE 1 HYPERTENSION",
-				"STAGE 2 HYPERTENSION","HYPERTENSIVE CRISIS"};
+
 		if(sys<120&&sys>0&&dias<80&&dias>0){
 			return bloodpressure[0];
 		}
