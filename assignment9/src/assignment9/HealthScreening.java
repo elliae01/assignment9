@@ -182,7 +182,7 @@ public class HealthScreening {
 		btnExport.setBounds(259, 305, 89, 23);
 		frmGlenview.getContentPane().add(btnExport);
 		
-	       DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+	       DateFormat df = new SimpleDateFormat("MM_dd_yyyy");
 	       Calendar calobj = Calendar.getInstance();
 	       //System.out.println(df.format(calobj.getTime()));
 	       date.setText(df.format(calobj.getTime()));
@@ -218,7 +218,7 @@ public class HealthScreening {
 				String []data={name.getText(),age.getText(),bmiClassification,
 						cholesterolClassification,bloodPressureClassification};
 				try {
-					Writer fileWriter = new FileWriter(".//bin//"+date.getText()+"out.txt",true);
+					Writer fileWriter = new FileWriter(".//bin//"+date.getText()+"_out.txt",true);
 					
 					for(int i=0; i < data.length; i++){
 						fileWriter.append(data[i]+"\r\n");
