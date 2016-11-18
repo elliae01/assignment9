@@ -75,7 +75,7 @@ public class HealthScreening {
 		frmGlenview.setTitle("Glenview                   "
 				+ "                           ");
 		frmGlenview.getContentPane().setBackground(new Color(255, 255, 255));
-		frmGlenview.setBounds(100, 100, 385, 376);
+		frmGlenview.setBounds(100, 100, 385, 399);
 		frmGlenview.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmGlenview.getContentPane().setLayout(null);
 		
@@ -196,6 +196,10 @@ public class HealthScreening {
 	       lblIn.setFont(new Font("Tahoma", Font.PLAIN, 10));
 	       lblIn.setBounds(225, 197, 46, 14);
 	       frmGlenview.getContentPane().add(lblIn);
+	       
+	       JButton btnClearAll = new JButton("Clear All");
+	       btnClearAll.setBounds(134, 339, 89, 23);
+	       frmGlenview.getContentPane().add(btnClearAll);
 		
 		btnSubmit.addActionListener(new ActionListener() {
 
@@ -277,6 +281,20 @@ public class HealthScreening {
 				
 					e1.printStackTrace();
 				}	
+				
+			}
+		});
+		btnClearAll.addActionListener(new ActionListener() {
+
+
+			public void actionPerformed(ActionEvent e) {
+				name.setText("");
+				age.setText("");
+				cholesterol.setText("");
+				weight.setText("");
+				systolic.setText("");
+				height.setText("");
+				diastolic.setText("");
 				
 			}
 		});
