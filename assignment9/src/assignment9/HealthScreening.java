@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
+import javax.swing.plaf.ColorUIResource;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -15,9 +17,14 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JPanel;
@@ -26,15 +33,15 @@ import java.awt.Color;
 
 public class HealthScreening {
 
-	private JFrame frame;
+	private JFrame frmGlenview;
 	private JTextField name;
 	private JTextField date;
 	private JTextField age;
-	private JTextField totalC;
-	private JTextField BMI;
-	private JTextField BP;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField cholesterol;
+	private JTextField weight;
+	private JTextField systolic;
+	private JTextField height;
+	private JTextField diastolic;
 
 	/**
 	 * Launch the application.
@@ -44,7 +51,7 @@ public class HealthScreening {
 			public void run() {
 				try {
 					HealthScreening window = new HealthScreening();
-					window.frame.setVisible(true);
+					window.frmGlenview.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -63,121 +70,161 @@ public class HealthScreening {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(175, 238, 238));
-		frame.setBounds(100, 100, 385, 352);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmGlenview = new JFrame();
+		frmGlenview.setResizable(false);
+		frmGlenview.setTitle("Glenview                   "
+				+ "                           ");
+		frmGlenview.getContentPane().setBackground(new Color(255, 255, 255));
+		frmGlenview.setBounds(100, 100, 385, 376);
+		frmGlenview.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmGlenview.getContentPane().setLayout(null);
 		
+		JLabel b2 = new JLabel(new ImageIcon("glenview2.png"));
+		b2.setBounds(0, 0, 196, 61);
+		frmGlenview.getContentPane().add(b2);
+
 		name = new JTextField();
-		name.setBounds(116, 79, 86, 20);
-		frame.getContentPane().add(name);
+		name.setBounds(137, 104, 86, 20);
+		frmGlenview.getContentPane().add(name);
 		name.setColumns(10);
 		
 		date = new JTextField();
-		date.setBounds(116, 51, 86, 20);
-		frame.getContentPane().add(date);
+		date.setEditable(false);
+		date.setBounds(137, 76, 86, 20);
+		frmGlenview.getContentPane().add(date);
 		date.setColumns(10);
 		
 		age = new JTextField();
-		age.setBounds(116, 110, 86, 20);
-		frame.getContentPane().add(age);
+		age.setBounds(137, 135, 86, 20);
+		frmGlenview.getContentPane().add(age);
 		age.setColumns(10);
 		
-		totalC = new JTextField();
-		totalC.setBounds(116, 200, 86, 20);
-		frame.getContentPane().add(totalC);
-		totalC.setColumns(10);
+		cholesterol = new JTextField();
+		cholesterol.setBounds(137, 225, 86, 20);
+		frmGlenview.getContentPane().add(cholesterol);
+		cholesterol.setColumns(10);
 		
-		BMI = new JTextField();
-		BMI.setBounds(116, 141, 86, 20);
-		frame.getContentPane().add(BMI);
-		BMI.setColumns(10);
+		weight = new JTextField();
+		weight.setBounds(137, 166, 86, 20);
+		frmGlenview.getContentPane().add(weight);
+		weight.setColumns(10);
 		
 		JLabel lblPatientName = new JLabel("Name");
-		lblPatientName.setBounds(72, 82, 34, 14);
-		frame.getContentPane().add(lblPatientName);
+		lblPatientName.setForeground(new Color(0, 102, 204));
+		lblPatientName.setBounds(91, 110, 34, 14);
+		frmGlenview.getContentPane().add(lblPatientName);
 		
 		JLabel lblDate = new JLabel("Date");
-		lblDate.setBounds(79, 54, 27, 14);
-		frame.getContentPane().add(lblDate);
+		lblDate.setForeground(new Color(0, 102, 204));
+		lblDate.setBounds(98, 82, 27, 14);
+		frmGlenview.getContentPane().add(lblDate);
 		
 		JLabel lblAge = new JLabel("Age");
-		lblAge.setBounds(79, 113, 27, 14);
-		frame.getContentPane().add(lblAge);
+		lblAge.setForeground(new Color(0, 102, 204));
+		lblAge.setBounds(101, 141, 27, 14);
+		frmGlenview.getContentPane().add(lblAge);
 		
 		JLabel lbCholesteral = new JLabel("Cholesteral");
-		lbCholesteral.setBounds(39, 203, 67, 14);
-		frame.getContentPane().add(lbCholesteral);
+		lbCholesteral.setForeground(new Color(0, 102, 204));
+		lbCholesteral.setBounds(58, 231, 67, 14);
+		frmGlenview.getContentPane().add(lbCholesteral);
 		
 		JLabel lblBodyMassIndex = new JLabel("Weight");
-		lblBodyMassIndex.setBounds(64, 144, 42, 14);
-		frame.getContentPane().add(lblBodyMassIndex);
+		lblBodyMassIndex.setForeground(new Color(0, 102, 204));
+		lblBodyMassIndex.setBounds(83, 172, 42, 14);
+		frmGlenview.getContentPane().add(lblBodyMassIndex);
 		
-		BP = new JTextField();
-		BP.setBounds(116, 228, 86, 20);
-		frame.getContentPane().add(BP);
-		BP.setColumns(10);
+		systolic = new JTextField();
+		systolic.setBounds(137, 253, 86, 20);
+		frmGlenview.getContentPane().add(systolic);
+		systolic.setColumns(10);
 		
 		JLabel lblBloodPressure = new JLabel("Blood Pressure");
-		lblBloodPressure.setBounds(21, 231, 96, 14);
-		frame.getContentPane().add(lblBloodPressure);
-		
-		JLabel lblPatientHealthScreening = new JLabel("Patient Health Screening");
-		lblPatientHealthScreening.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblPatientHealthScreening.setBounds(10, 11, 176, 20);
-		frame.getContentPane().add(lblPatientHealthScreening);
+		lblBloodPressure.setForeground(new Color(0, 102, 204));
+		lblBloodPressure.setBounds(34, 256, 96, 14);
+		frmGlenview.getContentPane().add(lblBloodPressure);
 		
 		JButton btnSubmit = new JButton("Submit");
 		btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btnSubmit.setBounds(21, 279, 89, 23);
-		frame.getContentPane().add(btnSubmit);
+		btnSubmit.setBounds(20, 304, 89, 23);
+		frmGlenview.getContentPane().add(btnSubmit);
 		
-		textField = new JTextField();
-		textField.setBounds(116, 169, 86, 20);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		height = new JTextField();
+		height.setBounds(137, 194, 86, 20);
+		frmGlenview.getContentPane().add(height);
+		height.setColumns(10);
 		
 		JLabel lblHeight = new JLabel("Height");
-		lblHeight.setBounds(64, 169, 42, 14);
-		frame.getContentPane().add(lblHeight);
+		lblHeight.setForeground(new Color(0, 102, 204));
+		lblHeight.setBounds(86, 200, 42, 14);
+		frmGlenview.getContentPane().add(lblHeight);
 		
 		JButton btnPrintSummary = new JButton("Print Summary");
-		btnPrintSummary.setBounds(116, 280, 134, 23);
-		frame.getContentPane().add(btnPrintSummary);
+		btnPrintSummary.setBounds(115, 305, 134, 23);
+		frmGlenview.getContentPane().add(btnPrintSummary);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(212, 228, 86, 20);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		diastolic = new JTextField();
+		diastolic.setBounds(233, 253, 86, 20);
+		frmGlenview.getContentPane().add(diastolic);
+		diastolic.setColumns(10);
 		
 		JLabel lblSystolic = new JLabel("systolic");
-		lblSystolic.setFont(new Font("Tahoma", Font.ITALIC, 11));
-		lblSystolic.setBounds(140, 245, 46, 14);
-		frame.getContentPane().add(lblSystolic);
+		lblSystolic.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		lblSystolic.setBounds(161, 270, 46, 14);
+		frmGlenview.getContentPane().add(lblSystolic);
 		
 		JLabel lblNewLabel = new JLabel("diastolic");
-		lblNewLabel.setFont(new Font("Tahoma", Font.ITALIC, 11));
-		lblNewLabel.setBounds(234, 245, 46, 14);
-		frame.getContentPane().add(lblNewLabel);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		lblNewLabel.setBounds(255, 270, 46, 14);
+		frmGlenview.getContentPane().add(lblNewLabel);
 		
 		JButton btnExport = new JButton("Export");
-		btnExport.setBounds(260, 280, 89, 23);
-		frame.getContentPane().add(btnExport);
+		btnExport.setBounds(259, 305, 89, 23);
+		frmGlenview.getContentPane().add(btnExport);
+		
+	       DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+	       Calendar calobj = Calendar.getInstance();
+	       //System.out.println(df.format(calobj.getTime()));
+	       date.setText(df.format(calobj.getTime()));
+	       
+	       JLabel lblLbs = new JLabel("lbs.");
+	       lblLbs.setFont(new Font("Tahoma", Font.PLAIN, 10));
+	       lblLbs.setBounds(225, 169, 46, 14);
+	       frmGlenview.getContentPane().add(lblLbs);
+	       
+	       JLabel lblIn = new JLabel("inches");
+	       lblIn.setFont(new Font("Tahoma", Font.PLAIN, 10));
+	       lblIn.setBounds(225, 197, 46, 14);
+	       frmGlenview.getContentPane().add(lblIn);
 		
 		btnSubmit.addActionListener(new ActionListener() {
 
 
 			public void actionPerformed(ActionEvent e) {
 				
-				String []data={name.getText(),age.getText(),totalC.getText(),BP.getText()};
+				BmiCalculator bmi = new BmiCalculator();
+				PatientClassification classification = new PatientClassification();
+				
+				double bmiCalc = bmi.calculateBmi(Double.parseDouble(weight.getText())
+						,Double.parseDouble(height.getText()),true);
+				System.out.println(bmiCalc);
+				
+				String bloodPressureClassification = classification.bloodPressure(Integer.parseInt(systolic.getText()),Integer.parseInt(diastolic.getText()));
+				
+				String cholesterolClassification = classification.Cholesterol(Integer.parseInt(cholesterol.getText()));
+				
+				String bmiClassification = classification.BMI(bmiCalc);
+				
+				String []data={name.getText(),age.getText(),bmiClassification,
+						cholesterolClassification,bloodPressureClassification};
 				try {
 					Writer fileWriter = new FileWriter(".//bin//"+date.getText()+"out.txt",true);
-					for(int i=0; i < data.length; i++)
-					{
-					fileWriter.append(data[i]+"\r\n");
+					
+					for(int i=0; i < data.length; i++){
+						fileWriter.append(data[i]+"\r\n");
 					}
 					fileWriter.close();
+					
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -188,29 +235,34 @@ public class HealthScreening {
 
 
 			public void actionPerformed(ActionEvent e) {
+				
+				 //getting current date and time using Date class
+
 				JFileChooser fileChooser = new JFileChooser();
 				fileChooser.setCurrentDirectory(new java.io.File(".//bin"));
 				int result = fileChooser.showOpenDialog(null);
 				File selectedFile = null;
+				
 				if (result == JFileChooser.APPROVE_OPTION) {
 				    selectedFile = fileChooser.getSelectedFile();
 				    System.out.println("Selected file: " + selectedFile.getAbsolutePath());
 				}
 				else if (result == JFileChooser.CANCEL_OPTION) {
 				    System.out.println("Cancel was selected");
-				    System.exit(0);
+				    //System.exit(0);
+				    
 				}
-				else if(selectedFile ==null){
+				else if(selectedFile==null){
 					System.out.println("no file selected");
-					System.exit(0);
+					//System.exit(0);
 				}
-				String[]data = null;
+			
 				
 				try {
 					BufferedReader br = new BufferedReader(new FileReader(selectedFile));
-				    //StringBuilder sb = new StringBuilder();
+				  
 				    String line;
-				    int i=0;
+	
 				    List<String> list = new ArrayList<String>();
 				    while((line = br.readLine()) != null){
 				        list.add(line);

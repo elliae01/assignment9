@@ -13,7 +13,7 @@ public class BmiCalculator {
 	 * @param imperial If true, use pounds/inches instead
 	 * @return BMI value, or -1 if there was an error
 	 */
-	public static double calculateBmi(double weight, double height, boolean imperial) {
+	public double calculateBmi(double weight, double height, boolean imperial) {
 
 		// The BMI calculator service uses metric units, so imperial units must be converted to metric
 		if (imperial) {
