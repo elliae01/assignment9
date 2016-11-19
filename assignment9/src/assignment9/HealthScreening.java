@@ -75,7 +75,7 @@ public class HealthScreening {
 		frmGlenview.setTitle("Glenview                   "
 				+ "                           ");
 		frmGlenview.getContentPane().setBackground(new Color(255, 255, 255));
-		frmGlenview.setBounds(100, 100, 385, 399);
+		frmGlenview.setBounds(100, 100, 372, 399);
 		frmGlenview.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmGlenview.getContentPane().setLayout(null);
 		
@@ -179,7 +179,7 @@ public class HealthScreening {
 		frmGlenview.getContentPane().add(lblNewLabel);
 		
 		JButton btnExport = new JButton("Export");
-		btnExport.setBounds(259, 305, 89, 23);
+		btnExport.setBounds(255, 305, 89, 23);
 		frmGlenview.getContentPane().add(btnExport);
 		
 	       DateFormat df = new SimpleDateFormat("MM-dd-yyyy");
