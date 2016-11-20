@@ -7,6 +7,7 @@ import de.toolforge.googlechartwrapper.Dimension;
 import de.toolforge.googlechartwrapper.PieChart;
 import de.toolforge.googlechartwrapper.color.ChartColor;
 import de.toolforge.googlechartwrapper.data.PieChartSlice;
+import de.toolforge.googlechartwrapper.label.ChartTitle;
 
 enum CHART_TYPE
 {
@@ -33,6 +34,9 @@ public class PiechartWebServiceManager
 		pieCharts[0].addChartColor(new ChartColor(new Color(240, 50, 200)));
 		pieCharts[1].addChartColor(new ChartColor(new Color(50, 50, 240)));
 		pieCharts[2].addChartColor(new ChartColor(new Color(185, 0, 15)));
+		pieCharts[0].setChartTitle(new ChartTitle("Total Cholesteral"));
+		pieCharts[1].setChartTitle(new ChartTitle("Body Mass Index"));
+		pieCharts[2].setChartTitle(new ChartTitle("Blood Pressure"));
 	}
 	
 	public void addPieSlice(CHART_TYPE type, String label, int value)
