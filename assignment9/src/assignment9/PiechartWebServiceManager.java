@@ -52,6 +52,7 @@ public class PiechartWebServiceManager
 		}
 	}
 	
+	// The URLs contain the individual pie charts.
 	public void printUrls()
 	{
 		System.out.println("Cholesterol:\n" + pieCharts[0].getUrl());

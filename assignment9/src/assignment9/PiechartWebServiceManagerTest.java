@@ -20,6 +20,7 @@ public class PiechartWebServiceManagerTest
 		assertEquals("http://chart.apis.google.com/chart?cht=p&chs=500x250&chco=f032c8&chd=e:0Wou..&chl=High|Borderline High|Desirable",
 				chartUrl);
 		
+		// Temporary : prints URL with Total Cholesterol Chart
 		System.out.println(chartUrl);
 	}
 	
@@ -36,6 +37,7 @@ public class PiechartWebServiceManagerTest
 		assertEquals("http://chart.apis.google.com/chart?cht=p&chs=500x250&chco=3232f0&chd=e:Yx..jG1r&chl=Overweight|Obese|Underweight|Normal",
 				pieChartManager.getUrl(CHART_TYPE.BMI));
 		
+		// Temporary : prints URL with Total Cholesterol Chart
 		System.out.println(chartUrl);
 	}
 	
@@ -53,6 +55,7 @@ public class PiechartWebServiceManagerTest
 		assertEquals("http://chart.apis.google.com/chart?cht=p&chs=500x250&chco=b9000f&chd=e:UJkvNC..bQ&chl=Stage 1 Hypertension|Stage 2 Hypertension|Hypertensive Crisis|Normal|Prehypertension",
 				pieChartManager.getUrl(CHART_TYPE.bloodPressure));
 		
+		// Temporary : prints URL with Total Cholesterol Chart
 		System.out.println(chartUrl);
 	}
 }
