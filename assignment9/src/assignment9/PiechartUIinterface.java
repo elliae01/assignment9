@@ -64,27 +64,27 @@ public class PiechartUIinterface {
 		URI uri3 = null;
 		
 	    try {
-	      URL url = new URL(chartUrl);
-	      URL url2 = new URL(chartUrl2);
-	      URL url3 = new URL(chartUrl3);
-	      String nullFragment = null;
-	      String nullFragment2 = null;
-	      String nullFragment3 = null;
-	      uri = new URI(url.getProtocol(), url.getHost(), url.getPath(), url.getQuery(), nullFragment);
-	      uri2 = new URI(url2.getProtocol(), url2.getHost(), url2.getPath(), url2.getQuery(), nullFragment2);
-	      uri3 = new URI(url3.getProtocol(), url3.getHost(), url3.getPath(), url3.getQuery(), nullFragment3);
-	      System.out.println("URI " + uri.toString() + " is OK");
-	      System.out.println("URI " + uri2.toString() + " is OK");
-	      System.out.println("URI " + uri3.toString() + " is OK");
-	    } catch (MalformedURLException e) {
-	      System.out.println("URL " + chartUrl + " is a malformed URL");
-	      System.out.println("URL " + chartUrl2 + " is a malformed URL");
-	      System.out.println("URL " + chartUrl3 + " is a malformed URL");
-	    } catch (URISyntaxException e) {
-	      System.out.println("URI " + chartUrl + " is a malformed URL");
-	      System.out.println("URL " + chartUrl2 + " is a malformed URL");
-	      System.out.println("URL " + chartUrl3 + " is a malformed URL");
-	    }
+		      URL url = new URL(chartUrl);
+		      URL url2 = new URL(chartUrl2);
+		      URL url3 = new URL(chartUrl3);
+		      String nullFragment = null;
+		      String nullFragment2 = null;
+		      String nullFragment3 = null;
+		      uri = new URI(url.getProtocol(), url.getHost(), url.getPath(), url.getQuery(), nullFragment);
+		      uri2 = new URI(url2.getProtocol(), url2.getHost(), url2.getPath(), url2.getQuery(), nullFragment2);
+		      uri3 = new URI(url3.getProtocol(), url3.getHost(), url3.getPath(), url3.getQuery(), nullFragment3);
+		      System.out.println("URI " + uri.toString() + " is OK");
+		      System.out.println("URI " + uri2.toString() + " is OK");
+		      System.out.println("URI " + uri3.toString() + " is OK");
+	    	} catch (MalformedURLException e) {
+			      System.out.println("URL " + chartUrl + " is a malformed URL");
+			      System.out.println("URL " + chartUrl2 + " is a malformed URL");
+			      System.out.println("URL " + chartUrl3 + " is a malformed URL");
+	    	} catch (URISyntaxException e) {
+			      System.out.println("URI " + chartUrl + " is a malformed URL");
+			      System.out.println("URL " + chartUrl2 + " is a malformed URL");
+			      System.out.println("URL " + chartUrl3 + " is a malformed URL");
+	   	}
 	  
         Desktop d=Desktop.getDesktop();
         // Browse a URL
