@@ -2,13 +2,10 @@ package assignment9;
 
 import java.awt.Desktop;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.net.URLEncoder;
-
 import assignment9.CHART_TYPE;
 import assignment9.PiechartWebServiceManager;
 
@@ -35,7 +32,7 @@ public class PiechartUIinterface {
 			}
 			total[j]=k;
 		}
-		int sum=total[0]+total[1]+total[2];
+		
 
 		PiechartWebServiceManager pc = new PiechartWebServiceManager();
 		
@@ -57,14 +54,15 @@ public class PiechartUIinterface {
 		pc.addPieSlice(CHART_TYPE.bloodPressure, "Normal", total[10]);
 		pc.addPieSlice(CHART_TYPE.bloodPressure, "Prehypertension", total[11]);
 		String chartUrl3 = pc.getUrl(CHART_TYPE.bloodPressure);
+		
 		System.out.println(chartUrl);
 		System.out.println(chartUrl2);
 		System.out.println(chartUrl3);
+		
 		URI uri = null;
 		URI uri2 = null;
 		URI uri3 = null;
 		
-	    //String myURL = "http://finance.yahoo.com/q/h?s=^IXIC";
 	    try {
 	      URL url = new URL(chartUrl);
 	      URL url2 = new URL(chartUrl2);
@@ -88,9 +86,6 @@ public class PiechartUIinterface {
 	      System.out.println("URL " + chartUrl3 + " is a malformed URL");
 	    }
 	  
-
-
-		
         Desktop d=Desktop.getDesktop();
         // Browse a URL
         
