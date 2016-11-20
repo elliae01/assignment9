@@ -4,6 +4,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
+import assignment9.CHART_TYPE;
+import assignment9.PiechartWebServiceManager;
+
+import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -294,7 +298,31 @@ public class HealthScreening {
 
 			public void actionPerformed(ActionEvent e) {
 
-
+				PiechartWebServiceManager pc = new PiechartWebServiceManager();
+				
+				JFileChooser fileChooser = new JFileChooser();
+				fileChooser.setCurrentDirectory(new java.io.File(".//PatientHealthScreenData"));
+				int result = fileChooser.showOpenDialog(null);
+				File selectedFile = null;
+				
+				if (result == JFileChooser.APPROVE_OPTION) {
+				    selectedFile = fileChooser.getSelectedFile();
+				    //System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+				}
+				else if (result == JFileChooser.CANCEL_OPTION) {
+				    System.out.println("Cancel was selected");
+				    //System.exit(0);
+				    
+				}
+				else if(selectedFile==null){
+					System.out.println("no file selected");
+					//System.exit(0);
+				}
+				PatientFile patientfile = new PatientFile();
+				String[]inFile=patientfile.inFile(selectedFile);
+				
+				PiechartUIinterface pi = new PiechartUIinterface();
+				pi.chartExport(inFile);
 				
 			}
 		});
