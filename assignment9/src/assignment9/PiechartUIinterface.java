@@ -3,8 +3,10 @@ package assignment9;
 import java.awt.Desktop;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.net.URLEncoder;
 
 import assignment9.CHART_TYPE;
@@ -62,37 +64,31 @@ public class PiechartUIinterface {
 		URI uri2 = null;
 		URI uri3 = null;
 		
-		
-			try {
-				uri = new URI( String.format("http://chart.apis.google.com/chart?cht=p&chs=800x250&chco=f032c8&chd=e:0Wou..&chl=%s",
-						URLEncoder.encode( chartUrl , "UTF8" ) ) );
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (URISyntaxException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			try {
-				uri2 = new URI( String.format("http://chart.apis.google.com/chart?cht=p&chs=500x250&chco=3232f0&chd=e:Yx..jG1r&chl=%s",
-						URLEncoder.encode( chartUrl2 , "UTF8" ) ) );
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (URISyntaxException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			try {
-				uri3 = new URI( String.format("http://chart.apis.google.com/chart?cht=p&chs=500x250&chco=b9000f&chd=e:UJkvNC..bQ&chl=%s",
-						URLEncoder.encode( chartUrl3 , "UTF8" ) ) );
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (URISyntaxException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+	    //String myURL = "http://finance.yahoo.com/q/h?s=^IXIC";
+	    try {
+	      URL url = new URL(chartUrl);
+	      URL url2 = new URL(chartUrl2);
+	      URL url3 = new URL(chartUrl3);
+	      String nullFragment = null;
+	      String nullFragment2 = null;
+	      String nullFragment3 = null;
+	      uri = new URI(url.getProtocol(), url.getHost(), url.getPath(), url.getQuery(), nullFragment);
+	      uri2 = new URI(url2.getProtocol(), url2.getHost(), url2.getPath(), url2.getQuery(), nullFragment2);
+	      uri3 = new URI(url3.getProtocol(), url3.getHost(), url3.getPath(), url3.getQuery(), nullFragment3);
+	      System.out.println("URI " + uri.toString() + " is OK");
+	      System.out.println("URI " + uri2.toString() + " is OK");
+	      System.out.println("URI " + uri3.toString() + " is OK");
+	    } catch (MalformedURLException e) {
+	      System.out.println("URL " + chartUrl + " is a malformed URL");
+	      System.out.println("URL " + chartUrl2 + " is a malformed URL");
+	      System.out.println("URL " + chartUrl3 + " is a malformed URL");
+	    } catch (URISyntaxException e) {
+	      System.out.println("URI " + chartUrl + " is a malformed URL");
+	      System.out.println("URL " + chartUrl2 + " is a malformed URL");
+	      System.out.println("URL " + chartUrl3 + " is a malformed URL");
+	    }
+	  
+
 
 		
         Desktop d=Desktop.getDesktop();
