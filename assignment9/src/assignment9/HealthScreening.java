@@ -214,19 +214,28 @@ public class HealthScreening {
 
 			public void actionPerformed(ActionEvent e) {
 				
-				if(name.getText().equals("")||age.getText().equals("")||cholesterol.getText().equals("")
-						||weight.getText().equals("")||systolic.getText().equals("")
-						||height.getText().equals("")||diastolic.getText().equals("")){
+				if(name.getText().equals("")){
 					name.setText("0");
+				}
+				if(age.getText().equals("")){
 					age.setText("0");
+				}
+				if(cholesterol.getText().equals("")){
 					cholesterol.setText("0");
+				}
+				if(weight.getText().equals("")){
 					weight.setText("0");
+				}
+				if(systolic.getText().equals("")){
 					systolic.setText("0");
+				}
+				if(height.getText().equals("")){
 					height.setText("0");
+				}
+				if(diastolic.getText().equals("")){
 					diastolic.setText("0");
 				}
 				
-
 				BmiCalculator bmi = new BmiCalculator();
 				PatientClassification classification = new PatientClassification();
 				

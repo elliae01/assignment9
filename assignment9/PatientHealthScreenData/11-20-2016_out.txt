@@ -1,0 +1,45 @@
+Health Screening for 0
+
+Date: 11-20-2016
+Age: 0     Height: 0 feet     Weight: 0
+
+Body Mass Index: ? n/a
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
+Health Screening for fred frost
+
+Date: 11-20-2016
+Age: 67     Height: 6 feet     Weight: 190
+
+Body Mass Index: 25.8 OVERWEIGHT
+Total Cholesterol: 130 DESIRABLE
+Blood Pressure: 130/90 PREHYPERTENSION
+
+Health Screening for aaron
+
+Date: 11-20-2016
+Age: 34     Height: 5.9 feet     Weight: 200
+
+Body Mass Index: 27.9 OVERWEIGHT
+Total Cholesterol: 120 DESIRABLE
+Blood Pressure: 119/79 NORMAL
+
+Health Screening for aaron
+
+Date: 11-20-2016
+Age: 37     Height: 6.1 feet     Weight: 200
+
+Body Mass Index: 26.4 OVERWEIGHT
+Total Cholesterol: 0 n/a
+Blood Pressure: 119/79 NORMAL
+
+Health Screening for 0
+
+Date: 11-20-2016
+Age: 0     Height: 0 feet     Weight: 0
+
+Body Mass Index: ? n/a
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
