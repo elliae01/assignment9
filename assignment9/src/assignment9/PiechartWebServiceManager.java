@@ -1,5 +1,7 @@
 package assignment9;
 
+import java.util.List;
+
 import de.toolforge.googlechartwrapper.Color;
 import de.toolforge.googlechartwrapper.Dimension;
 import de.toolforge.googlechartwrapper.PieChart;
@@ -35,6 +37,7 @@ public class PiechartWebServiceManager
 	
 	public void addPieSlice(CHART_TYPE type, String label, int value)
 	{
+		
 		switch (type)
 		{
 		case totalCholesterol:
@@ -50,7 +53,12 @@ public class PiechartWebServiceManager
 			System.out.println("INVALID CHART TYPE");
 			break;
 		}
+		
 	}
+		
+		
+		
+		
 	
 	// The URLs contain the individual pie charts.
 	public void printUrls()
@@ -79,4 +87,8 @@ public class PiechartWebServiceManager
 	{
 		return false;
 	}
+
+
+
+
 }

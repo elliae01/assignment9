@@ -3,19 +3,34 @@ package assignment9;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLEncoder;
+
+import de.toolforge.googlechartwrapper.PieChart;
+import de.toolforge.googlechartwrapper.data.PieChartSlice;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import java.awt.Color;
+import java.awt.Desktop;
 
 public class HealthScreening {
 
@@ -272,6 +287,15 @@ public class HealthScreening {
 				sum.summary(inFile,date.getText());
 
 
+			}
+		});
+		btnExport.addActionListener(new ActionListener() {
+
+
+			public void actionPerformed(ActionEvent e) {
+
+
+				
 			}
 		});
 		btnClearAll.addActionListener(new ActionListener() {
