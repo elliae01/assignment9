@@ -16,3 +16,57 @@ Body Mass Index: 17.6 UNDERWEIGHT
 Total Cholesterol: 123 DESIRABLE
 Blood Pressure: 120/80 PREHYPERTENSION
 
+Health Screening for john smith
+
+Date: 11-21-2016
+Age: 110     Height: 6 feet     Weight: 156
+
+Body Mass Index: 21.2 NORMAL
+Total Cholesterol: 140 DESIRABLE
+Blood Pressure: 120/80 PREHYPERTENSION
+
+Health Screening for john jones
+
+Date: 11-21-2016
+Age: 110     Height: 5.9 feet     Weight: 190
+
+Body Mass Index: 26.5 OVERWEIGHT
+Total Cholesterol: 120 DESIRABLE
+Blood Pressure: 120/80 PREHYPERTENSION
+
+Health Screening for n/a
+
+Date: 11-21-2016
+Age: 12     Height: 0 feet     Weight: 0
+
+Body Mass Index: ? n/a
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
+Health Screening for n/a
+
+Date: 11-21-2016
+Age: 12     Height: 0 feet     Weight: 0
+
+Body Mass Index: ? n/a
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
+Health Screening for john smith
+
+Date: 11-21-2016
+Age: 110     Height: 5.9 feet     Weight: 190
+
+Body Mass Index: 26.5 OVERWEIGHT
+Total Cholesterol: 120 DESIRABLE
+Blood Pressure: 120/80 PREHYPERTENSION
+
+Health Screening for john smith
+
+Date: 11-21-2016
+Age: 110     Height: 5.9 feet     Weight: 190
+
+Body Mass Index: 26.5 OVERWEIGHT
+Total Cholesterol: 120 DESIRABLE
+Blood Pressure: 120/80 PREHYPERTENSION
+

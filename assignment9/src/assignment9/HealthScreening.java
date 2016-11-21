@@ -113,10 +113,10 @@ public class HealthScreening {
 		lblAge.setBounds(101, 141, 27, 14);
 		frmGlenview.getContentPane().add(lblAge);
 		
-		JLabel lbCholesteral = new JLabel("Cholesteral");
-		lbCholesteral.setForeground(new Color(0, 102, 204));
-		lbCholesteral.setBounds(58, 231, 67, 14);
-		frmGlenview.getContentPane().add(lbCholesteral);
+		JLabel lbCholesterol = new JLabel("Cholesterol");
+		lbCholesterol.setForeground(new Color(0, 102, 204));
+		lbCholesterol.setBounds(58, 231, 67, 14);
+		frmGlenview.getContentPane().add(lbCholesterol);
 		
 		JLabel lblBodyMassIndex = new JLabel("Weight");
 		lblBodyMassIndex.setForeground(new Color(0, 102, 204));
