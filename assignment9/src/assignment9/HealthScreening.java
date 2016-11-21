@@ -4,6 +4,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -197,7 +199,7 @@ public class HealthScreening {
 			public void actionPerformed(ActionEvent e) {
 				
 				if(name.getText().equals("")){
-					name.setText("0");
+					name.setText("n/a");
 				}
 				if(age.getText().equals("")){
 					age.setText("0");
@@ -217,7 +219,10 @@ public class HealthScreening {
 				if(diastolic.getText().equals("")){
 					diastolic.setText("0");
 				}
-				
+				if(Integer.parseInt(age.getText())>=1&&Integer.parseInt(age.getText())<=110){
+					
+					
+					
 				BmiCalculator bmi = new BmiCalculator();
 				PatientClassification classification = new PatientClassification();
 				
@@ -239,6 +244,7 @@ public class HealthScreening {
 				heightFeet=heightFeet/12;
 				h=df2.format(heightFeet);
 
+				
 				String []data={"Health Screening for "+name.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
 				+h+" feet"+"     "+"Weight: "+weight.getText(),"\nBody Mass Index: "+bmiCalcFormatted+" "
 				+bmiClassification,"Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
@@ -249,6 +255,12 @@ public class HealthScreening {
 				
 				PatientReport pr = new PatientReport();
 				pr.displayPatientReport(data);
+				
+				}else{
+					JOptionPane.showMessageDialog(frmGlenview, "The age entered is invalid.", "information",
+							JOptionPane.INFORMATION_MESSAGE);
+				}
+			
 
 			}
 		});

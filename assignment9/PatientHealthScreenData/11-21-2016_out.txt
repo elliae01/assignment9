@@ -1,0 +1,18 @@
+Health Screening for John Smith
+
+Date: 11-21-2016
+Age: 110     Height: 6 feet     Weight: 190
+
+Body Mass Index: 25.8 OVERWEIGHT
+Total Cholesterol: 150 DESIRABLE
+Blood Pressure: 120/90 PREHYPERTENSION
+
+Health Screening for john smith rises
+
+Date: 11-21-2016
+Age: 45     Height: 6.3 feet     Weight: 145
+
+Body Mass Index: 17.6 UNDERWEIGHT
+Total Cholesterol: 123 DESIRABLE
+Blood Pressure: 120/80 PREHYPERTENSION
+

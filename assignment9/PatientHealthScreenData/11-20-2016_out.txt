@@ -43,3 +43,57 @@ Body Mass Index: ? n/a
 Total Cholesterol: 0 n/a
 Blood Pressure: 0/0 n/a
 
+Health Screening for john smith
+
+Date: 11-20-2016
+Age: 43     Height: 5.9 feet     Weight: 201
+
+Body Mass Index: 28.0 OVERWEIGHT
+Total Cholesterol: 200 BORDERLINE HIGH
+Blood Pressure: 120/80 PREHYPERTENSION
+
+Health Screening for 0
+
+Date: 11-20-2016
+Age: 0     Height: 0 feet     Weight: 23
+
+Body Mass Index: ? OBESE
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
+Health Screening for 0
+
+Date: 11-20-2016
+Age: 0     Height: 0 feet     Weight: 0
+
+Body Mass Index: ? n/a
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
+Health Screening for n/a
+
+Date: 11-20-2016
+Age: 0     Height: 0 feet     Weight: 0
+
+Body Mass Index: ? n/a
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
+Health Screening for -1
+
+Date: 11-20-2016
+Age: 0     Height: 0 feet     Weight: 0
+
+Body Mass Index: ? n/a
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
+Health Screening for n/a
+
+Date: 11-20-2016
+Age: -1     Height: 0 feet     Weight: 0
+
+Body Mass Index: ? n/a
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
