@@ -1,0 +1,9 @@
+Health Screening for ae
+
+Date: 11-24-2016
+Age: 12     Height: 1 feet     Weight: 12
+
+Body Mass Index: 58.6 OBESE
+Total Cholesterol: 111 DESIRABLE
+Blood Pressure: 111/111 n/a
+

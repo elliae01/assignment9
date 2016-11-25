@@ -11,7 +11,7 @@ public class PatientSummary {
 	public void summary(String[]data, String date){
 		
 		String[]classifications={"DESIRABLE","BORDERLINE","HIGH","UNDERWEIGHT",
-				"NORMAL ","OVERWEIGHT","OBESE","NORMAL","PREHYPERTENSION",
+				"N0RMAL","OVERWEIGHT","OBESE","NORMAL","PREHYPERTENSION",
 				"STAGE 1 HYPERTENSION","STAGE 2 HYPERTENSION", "HYPERTENSIVE CRISIS"};
 		int[]total = new int[12];
 		
@@ -43,7 +43,7 @@ public class PatientSummary {
 		System.out.println("PREHYPERTENSION             "+total[8]);
 		System.out.println("STAGE 1 HYPERTENSION        "+total[9]);
 		System.out.println("STAGE 2 HYPERTENSION        "+total[10]);
-		System.out.println("HYPERTENSIVE                "+total[11]);
+		System.out.println("HYPERTENSIVE CRISIS         "+total[11]);
 		
 		
 	}

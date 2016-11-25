@@ -5,11 +5,13 @@
 	<classpathentry kind="lib" path="axis.jar"/>
 	<classpathentry kind="lib" path="bmi-service.jar"/>
 	<classpathentry kind="lib" path="commons-discovery-0.2.jar"/>
-	<classpathentry kind="lib" path="googlechartwrapper_1.1.jar"/>
 	<classpathentry kind="lib" path="javax.wsdl_1.6.2.v201012040545.jar"/>
 	<classpathentry kind="lib" path="jaxrpc.jar"/>
 	<classpathentry kind="lib" path="org.apache.commons.logging_1.0.4.v201101211617.jar"/>
 	<classpathentry kind="lib" path="saaj.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="googlechartwrapper_1.1.jar"/>
+	<classpathentry kind="lib" path="activation.jar"/>
+	<classpathentry kind="lib" path="javax.mail.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

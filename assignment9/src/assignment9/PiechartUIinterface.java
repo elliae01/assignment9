@@ -6,6 +6,7 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+
 import assignment9.CHART_TYPE;
 import assignment9.PiechartWebServiceManager;
 
@@ -18,7 +19,7 @@ public class PiechartUIinterface {
 	public void chartExport(String[]data){
 		
 		String[]classifications={"DESIRABLE","BORDERLINE","HIGH","UNDERWEIGHT",
-				"NORMAL ","OVERWEIGHT","OBESE","NORMAL","PREHYPERTENSION",
+				"N0RMAL","OVERWEIGHT","OBESE","NORMAL","PREHYPERTENSION",
 				"STAGE 1 HYPERTENSION","STAGE 2 HYPERTENSION", "HYPERTENSIVE CRISIS"};
 		int[]total = new int[12];
 		
@@ -40,7 +41,6 @@ public class PiechartUIinterface {
 		pc.addPieSlice(CHART_TYPE.totalCholesterol, "Borderline High", total[1]);
 		pc.addPieSlice(CHART_TYPE.totalCholesterol, "Desirable", total[2]);
 		String chartUrl = pc.getUrl(CHART_TYPE.totalCholesterol);
-		//System.out.println(chartUrl);
 		
 		pc.addPieSlice(CHART_TYPE.BMI, "Overweight", total[3]);
 		pc.addPieSlice(CHART_TYPE.BMI, "Obese", total[4]);
@@ -73,6 +73,7 @@ public class PiechartUIinterface {
 		      uri = new URI(url.getProtocol(), url.getHost(), url.getPath(), url.getQuery(), nullFragment);
 		      uri2 = new URI(url2.getProtocol(), url2.getHost(), url2.getPath(), url2.getQuery(), nullFragment2);
 		      uri3 = new URI(url3.getProtocol(), url3.getHost(), url3.getPath(), url3.getQuery(), nullFragment3);
+
 		      System.out.println("URI " + uri.toString() + " is OK");
 		      System.out.println("URI " + uri2.toString() + " is OK");
 		      System.out.println("URI " + uri3.toString() + " is OK");
@@ -97,8 +98,8 @@ public class PiechartUIinterface {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} 
-		
+        
+    	
 	}
-
 
 }
