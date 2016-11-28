@@ -23,7 +23,7 @@ import java.awt.Color;
 public class HealthScreening {
 
 	private JFrame frmGlenview;
-	private JTextField name;
+	private JTextField lastName;
 	private JTextField date;
 	private JTextField age;
 	private JTextField cholesterol;
@@ -31,7 +31,7 @@ public class HealthScreening {
 	private JTextField systolic;
 	private JTextField height;
 	private JTextField diastolic;
-	private JTextField textField;
+	private JTextField firstName;
 
 	/**
 	 * Launch the application.
@@ -73,10 +73,10 @@ public class HealthScreening {
 		b2.setBounds(0, 0, 196, 61);
 		frmGlenview.getContentPane().add(b2);
 
-		name = new JTextField();
-		name.setBounds(137, 104, 86, 20);
-		frmGlenview.getContentPane().add(name);
-		name.setColumns(10);
+		lastName = new JTextField();
+		lastName.setBounds(137, 104, 86, 20);
+		frmGlenview.getContentPane().add(lastName);
+		lastName.setColumns(10);
 		
 		date = new JTextField();
 		date.setEditable(false);
@@ -192,10 +192,10 @@ public class HealthScreening {
 	       btnClearAll.setBounds(134, 364, 89, 23);
 	       frmGlenview.getContentPane().add(btnClearAll);
 	       
-	       textField = new JTextField();
-	       textField.setBounds(137, 132, 86, 20);
-	       frmGlenview.getContentPane().add(textField);
-	       textField.setColumns(10);
+	       firstName = new JTextField();
+	       firstName.setBounds(137, 132, 86, 20);
+	       frmGlenview.getContentPane().add(firstName);
+	       firstName.setColumns(10);
 	       
 	       JLabel lblFirstName = new JLabel("First Name");
 	       lblFirstName.setForeground(new Color(0, 102, 204));
@@ -209,8 +209,8 @@ public class HealthScreening {
 
 			public void actionPerformed(ActionEvent e) {
 				
-				if(name.getText().equals("")){
-					name.setText("n/a");
+				if(lastName.getText().equals("")){
+					lastName.setText("n/a");
 				}
 				if(age.getText().equals("")){
 					age.setText("0");
@@ -259,7 +259,7 @@ public class HealthScreening {
 				h=df2.format(heightFeet);
 
 				
-				String []data={"Health Screening for "+name.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
+				String []data={"Health Screening for "+lastName.getText()+", "+firstName.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
 				+height.getText()+" feet"+"     "+"Weight: "+weight.getText(),"\nBody Mass Index: "+bmiCalcFormatted+" "
 				+bmiClassification,"Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
 				+systolic.getText()+"/"+diastolic.getText()+" "+bloodPressureClassification};
@@ -345,7 +345,7 @@ public class HealthScreening {
 
 
 			public void actionPerformed(ActionEvent e) {
-				name.setText("");
+				lastName.setText("");
 				age.setText("");
 				cholesterol.setText("");
 				weight.setText("");
