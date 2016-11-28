@@ -259,8 +259,8 @@ public class HealthScreening {
 				h=df2.format(heightFeet);
 
 				
-				String []data={"Health Screening for "+lastName.getText()+", "+firstName.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
-				+height.getText()+" feet"+"     "+"Weight: "+weight.getText(),"\nBody Mass Index: "+bmiCalcFormatted+" "
+				String []data={"Health Screening for "+firstName.getText()+" "+lastName.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
+				+height.getText()+" feet"+"     "+"Weight: "+weight.getText()+" lbs.","\nBody Mass Index: "+bmiCalcFormatted+" "
 				+bmiClassification,"Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
 				+systolic.getText()+"/"+diastolic.getText()+" "+bloodPressureClassification};
 				
