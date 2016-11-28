@@ -31,6 +31,7 @@ public class HealthScreening {
 	private JTextField systolic;
 	private JTextField height;
 	private JTextField diastolic;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -84,17 +85,17 @@ public class HealthScreening {
 		date.setColumns(10);
 		
 		age = new JTextField();
-		age.setBounds(137, 135, 86, 20);
+		age.setBounds(137, 160, 86, 20);
 		frmGlenview.getContentPane().add(age);
 		age.setColumns(10);
 		
 		cholesterol = new JTextField();
-		cholesterol.setBounds(137, 225, 86, 20);
+		cholesterol.setBounds(137, 250, 86, 20);
 		frmGlenview.getContentPane().add(cholesterol);
 		cholesterol.setColumns(10);
 		
 		weight = new JTextField();
-		weight.setBounds(137, 166, 86, 20);
+		weight.setBounds(137, 191, 86, 20);
 		frmGlenview.getContentPane().add(weight);
 		weight.setColumns(10);
 		
@@ -110,65 +111,65 @@ public class HealthScreening {
 		
 		JLabel lblAge = new JLabel("Age");
 		lblAge.setForeground(new Color(0, 102, 204));
-		lblAge.setBounds(101, 141, 27, 14);
+		lblAge.setBounds(101, 166, 27, 14);
 		frmGlenview.getContentPane().add(lblAge);
 		
 		JLabel lbCholesterol = new JLabel("Cholesterol");
 		lbCholesterol.setForeground(new Color(0, 102, 204));
-		lbCholesterol.setBounds(58, 231, 67, 14);
+		lbCholesterol.setBounds(58, 256, 67, 14);
 		frmGlenview.getContentPane().add(lbCholesterol);
 		
 		JLabel lblBodyMassIndex = new JLabel("Weight");
 		lblBodyMassIndex.setForeground(new Color(0, 102, 204));
-		lblBodyMassIndex.setBounds(83, 172, 42, 14);
+		lblBodyMassIndex.setBounds(83, 197, 42, 14);
 		frmGlenview.getContentPane().add(lblBodyMassIndex);
 		
 		systolic = new JTextField();
-		systolic.setBounds(137, 253, 86, 20);
+		systolic.setBounds(137, 278, 86, 20);
 		frmGlenview.getContentPane().add(systolic);
 		systolic.setColumns(10);
 		
 		JLabel lblBloodPressure = new JLabel("Blood Pressure");
 		lblBloodPressure.setForeground(new Color(0, 102, 204));
-		lblBloodPressure.setBounds(34, 256, 96, 14);
+		lblBloodPressure.setBounds(34, 281, 96, 14);
 		frmGlenview.getContentPane().add(lblBloodPressure);
 		
 		JButton btnSubmit = new JButton("Submit");
 		btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btnSubmit.setBounds(20, 304, 89, 23);
+		btnSubmit.setBounds(20, 329, 89, 23);
 		frmGlenview.getContentPane().add(btnSubmit);
 		
 		height = new JTextField();
-		height.setBounds(137, 194, 86, 20);
+		height.setBounds(137, 219, 86, 20);
 		frmGlenview.getContentPane().add(height);
 		height.setColumns(10);
 		
 		JLabel lblHeight = new JLabel("Height");
 		lblHeight.setForeground(new Color(0, 102, 204));
-		lblHeight.setBounds(86, 200, 42, 14);
+		lblHeight.setBounds(86, 225, 42, 14);
 		frmGlenview.getContentPane().add(lblHeight);
 		
 		JButton btnPrintSummary = new JButton("Print Summary");
-		btnPrintSummary.setBounds(115, 305, 134, 23);
+		btnPrintSummary.setBounds(115, 330, 134, 23);
 		frmGlenview.getContentPane().add(btnPrintSummary);
 		
 		diastolic = new JTextField();
-		diastolic.setBounds(233, 253, 86, 20);
+		diastolic.setBounds(233, 278, 86, 20);
 		frmGlenview.getContentPane().add(diastolic);
 		diastolic.setColumns(10);
 		
 		JLabel lblSystolic = new JLabel("systolic");
 		lblSystolic.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		lblSystolic.setBounds(161, 270, 46, 14);
+		lblSystolic.setBounds(161, 295, 46, 14);
 		frmGlenview.getContentPane().add(lblSystolic);
 		
 		JLabel lblNewLabel = new JLabel("diastolic");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		lblNewLabel.setBounds(255, 270, 46, 14);
+		lblNewLabel.setBounds(255, 295, 46, 14);
 		frmGlenview.getContentPane().add(lblNewLabel);
 		
 		JButton btnExport = new JButton("Export");
-		btnExport.setBounds(255, 305, 89, 23);
+		btnExport.setBounds(255, 330, 89, 23);
 		frmGlenview.getContentPane().add(btnExport);
 		
 		   //getting current date and time using Date class
@@ -179,17 +180,27 @@ public class HealthScreening {
 	       
 	       JLabel lblLbs = new JLabel("lbs.");
 	       lblLbs.setFont(new Font("Tahoma", Font.PLAIN, 10));
-	       lblLbs.setBounds(225, 169, 46, 14);
+	       lblLbs.setBounds(225, 194, 46, 14);
 	       frmGlenview.getContentPane().add(lblLbs);
 	       
 	       JLabel lblIn = new JLabel("feet");
 	       lblIn.setFont(new Font("Tahoma", Font.PLAIN, 10));
-	       lblIn.setBounds(225, 197, 46, 14);
+	       lblIn.setBounds(225, 222, 46, 14);
 	       frmGlenview.getContentPane().add(lblIn);
 	       
 	       JButton btnClearAll = new JButton("Clear All");
-	       btnClearAll.setBounds(134, 339, 89, 23);
+	       btnClearAll.setBounds(134, 364, 89, 23);
 	       frmGlenview.getContentPane().add(btnClearAll);
+	       
+	       textField = new JTextField();
+	       textField.setBounds(137, 132, 86, 20);
+	       frmGlenview.getContentPane().add(textField);
+	       textField.setColumns(10);
+	       
+	       JLabel lblFirstName = new JLabel("First Name");
+	       lblFirstName.setForeground(new Color(0, 102, 204));
+	       lblFirstName.setBounds(63, 135, 67, 14);
+	       frmGlenview.getContentPane().add(lblFirstName);
 	       
 
 		
