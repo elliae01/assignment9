@@ -64,7 +64,7 @@ public class HealthScreening {
 		frmGlenview.setTitle("Glenview                   "
 				+ "                           ");
 		frmGlenview.getContentPane().setBackground(new Color(255, 255, 255));
-		frmGlenview.setBounds(100, 100, 372, 399);
+		frmGlenview.setBounds(100, 100, 372, 439);
 		frmGlenview.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmGlenview.getContentPane().setLayout(null);
 		
@@ -98,9 +98,9 @@ public class HealthScreening {
 		frmGlenview.getContentPane().add(weight);
 		weight.setColumns(10);
 		
-		JLabel lblPatientName = new JLabel("Name");
+		JLabel lblPatientName = new JLabel("Last Name");
 		lblPatientName.setForeground(new Color(0, 102, 204));
-		lblPatientName.setBounds(91, 110, 34, 14);
+		lblPatientName.setBounds(63, 110, 67, 14);
 		frmGlenview.getContentPane().add(lblPatientName);
 		
 		JLabel lblDate = new JLabel("Date");
