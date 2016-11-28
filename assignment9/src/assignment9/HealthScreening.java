@@ -182,7 +182,7 @@ public class HealthScreening {
 	       lblLbs.setBounds(225, 169, 46, 14);
 	       frmGlenview.getContentPane().add(lblLbs);
 	       
-	       JLabel lblIn = new JLabel("inches");
+	       JLabel lblIn = new JLabel("feet");
 	       lblIn.setFont(new Font("Tahoma", Font.PLAIN, 10));
 	       lblIn.setBounds(225, 197, 46, 14);
 	       frmGlenview.getContentPane().add(lblIn);
@@ -228,8 +228,13 @@ public class HealthScreening {
 				
 				DecimalFormat df = new DecimalFormat("0.0");
 				DecimalFormat df2 = new DecimalFormat("0.#");
+				
+				String h = height.getText();
+				double heightFeet = Double.parseDouble(h);
+				heightFeet=heightFeet*12;
+				
 				double bmiCalc = bmi.calculateBmi(Double.parseDouble(weight.getText())
-						,Double.parseDouble(height.getText()),true);
+						,heightFeet,true);
 			
 				String bmiCalcFormatted = df.format(bmiCalc);
 				
@@ -239,14 +244,12 @@ public class HealthScreening {
 				
 				String bmiClassification = classification.BMI(bmiCalc);
 				
-				String h = height.getText();
-				double heightFeet = Double.parseDouble(h);
-				heightFeet=heightFeet/12;
+
 				h=df2.format(heightFeet);
 
 				
 				String []data={"Health Screening for "+name.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
-				+h+" feet"+"     "+"Weight: "+weight.getText(),"\nBody Mass Index: "+bmiCalcFormatted+" "
+				+height.getText()+" feet"+"     "+"Weight: "+weight.getText(),"\nBody Mass Index: "+bmiCalcFormatted+" "
 				+bmiClassification,"Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
 				+systolic.getText()+"/"+diastolic.getText()+" "+bloodPressureClassification};
 				

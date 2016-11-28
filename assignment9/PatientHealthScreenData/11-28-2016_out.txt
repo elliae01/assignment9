@@ -1,0 +1,18 @@
+Health Screening for n/a
+
+Date: 11-28-2016
+Age: 10     Height: 7.1 feet     Weight: 0
+
+Body Mass Index: 0.0 n/a
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
+Health Screening for n/a
+
+Date: 11-28-2016
+Age: 10     Height: 7.1 feet     Weight: 120
+
+Body Mass Index: 11.6 UNDERWEIGHT
+Total Cholesterol: 0 n/a
+Blood Pressure: 0/0 n/a
+
