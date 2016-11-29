@@ -1,7 +1,7 @@
 package test;
-import assignment9.PieChartWebServiceManager;
-import static org.junit.Assert.*;
 
+import static org.junit.Assert.*;
+import assignment9.PieChartWebServiceManager;
 import org.junit.Test;
 
 public class PiechartWebServiceManagerTest 
