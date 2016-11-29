@@ -7,13 +7,18 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -69,9 +74,23 @@ public class HealthScreening {
 		frmGlenview.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmGlenview.getContentPane().setLayout(null);
 		
-		JLabel b2 = new JLabel(new ImageIcon("glenview2.png"));
+		//Toolkit.getDefaultToolkit().getImage(getClass().getResource(".//assignment9//glenview2.PNG"));
+		//Toolkit.getDefaultToolkit().
+		
+		BufferedImage img = null;
+		
+		try {
+			img = ImageIO.read(HealthScreening.class.getResource("/images/glenview2.png"));
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		
+		JLabel b2 = new JLabel(new ImageIcon(img));
 		b2.setBounds(0, 0, 196, 61);
 		frmGlenview.getContentPane().add(b2);
+		
 
 		lastName = new JTextField();
 		lastName.setBounds(137, 104, 86, 20);
