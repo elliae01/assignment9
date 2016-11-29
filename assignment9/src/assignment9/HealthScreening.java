@@ -74,9 +74,6 @@ public class HealthScreening {
 		frmGlenview.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmGlenview.getContentPane().setLayout(null);
 		
-		//Toolkit.getDefaultToolkit().getImage(getClass().getResource(".//assignment9//glenview2.PNG"));
-		//Toolkit.getDefaultToolkit().
-		
 		BufferedImage img = null;
 		
 		try {
