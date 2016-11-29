@@ -1,5 +1,5 @@
-package assignment9;
-
+package test;
+import assignment9.PieChartWebServiceManager;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
