@@ -85,11 +85,12 @@ public class PiechartUIinterface {
 		pc.addPieSlice(CHART_TYPE.bloodPressure, "Prehypertension", total[11]);
 		String chartUrl3 = pc.getUrl(CHART_TYPE.bloodPressure);
 
+		/*
         PiechartFrame frame = new PiechartFrame(chartUrl, chartUrl2, chartUrl3);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
+        */
         
-        /*
 		System.out.println(chartUrl);
 		System.out.println(chartUrl2);
 		System.out.println(chartUrl3);
@@ -134,7 +135,6 @@ public class PiechartUIinterface {
 			e1.printStackTrace();
 		} 
         
-    	*/
 	}
 
 }
