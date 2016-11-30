@@ -9,13 +9,43 @@ import java.net.URL;
 
 import assignment9.CHART_TYPE;
 import assignment9.PiechartWebServiceManager;
+import java.awt.Color;
+import java.awt.GridLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+class PiechartFrame extends JFrame{
+
+    public PiechartFrame(String url1, String url2, String url3) {
+        setTitle("Pie charts");
+        setSize(550, 850);
+        setResizable(false);
+        getContentPane().setBackground(Color.WHITE);
+        setLayout(new GridLayout(3,1));
+
+        // Java will fail to download the images if the URLs contain spaces
+        url1 = url1.replaceAll(" ", "%20");
+        url2 = url2.replaceAll(" ", "%20");
+        url3 = url3.replaceAll(" ", "%20");
+        
+        try {
+            add(new JLabel(new ImageIcon(new URL(url1))));
+            add(new JLabel(new ImageIcon(new URL(url2))));
+            add(new JLabel(new ImageIcon(new URL(url3))));
+        } catch(Exception E) {
+        	System.out.println("Failed to add images");
+        }
+    }
+
+}
 
 public class PiechartUIinterface {
 
 	public PiechartUIinterface(){
 		
 	}
-	
+		
 	public void chartExport(String[]data){
 		
 		String[]classifications={"DESIRABLE","BORDERLINE","HIGH","UNDERWEIGHT",
@@ -54,7 +84,12 @@ public class PiechartUIinterface {
 		pc.addPieSlice(CHART_TYPE.bloodPressure, "Normal", total[10]);
 		pc.addPieSlice(CHART_TYPE.bloodPressure, "Prehypertension", total[11]);
 		String chartUrl3 = pc.getUrl(CHART_TYPE.bloodPressure);
-		
+
+        PiechartFrame frame = new PiechartFrame(chartUrl, chartUrl2, chartUrl3);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setVisible(true);
+        
+        /*
 		System.out.println(chartUrl);
 		System.out.println(chartUrl2);
 		System.out.println(chartUrl3);
@@ -99,7 +134,7 @@ public class PiechartUIinterface {
 			e1.printStackTrace();
 		} 
         
-    	
+    	*/
 	}
 
 }
