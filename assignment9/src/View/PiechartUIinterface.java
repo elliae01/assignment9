@@ -1,15 +1,45 @@
 package View;
 
+import java.awt.Color;
 import java.awt.Desktop;
+import java.awt.GridLayout;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 import View.PiechartWebServiceManager;
 import View.CHART_TYPE;
 
+class PiechartFrame extends JFrame{
+
+    public PiechartFrame(String url1, String url2, String url3) {
+        setTitle("Pie charts");
+        setSize(550, 850);
+        setResizable(false);
+        getContentPane().setBackground(Color.WHITE);
+        setLayout(new GridLayout(3,1));
+
+        // Java will fail to download the images if the URLs contain spaces
+        url1 = url1.replaceAll(" ", "%20");
+        url2 = url2.replaceAll(" ", "%20");
+        url3 = url3.replaceAll(" ", "%20");
+        
+        try {
+            add(new JLabel(new ImageIcon(new URL(url1))));
+            add(new JLabel(new ImageIcon(new URL(url2))));
+            add(new JLabel(new ImageIcon(new URL(url3))));
+        } catch(Exception E) {
+        	System.out.println("Failed to add images");
+        }
+    }
+
+}
 public class PiechartUIinterface  {
 
 	public PiechartUIinterface(){

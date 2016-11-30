@@ -1,11 +1,11 @@
 package Controller;
-import assignment9.BmiCalculator;
+import Model.BmiCalculator;
 
-import assignment9.PatientFile;
-import assignment9.PatientClassification;
-import assignment9.PiechartUIinterface;
-import assignment9.PatientReport;
-import assignment9.PatientSummary;
+import Model.PatientFile;
+import Model.PatientClassification;
+import View.PiechartUIinterface;
+import View.PatientReport;
+import View.PatientSummary;
 
 
 import java.awt.EventQueue;
