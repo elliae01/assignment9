@@ -2,6 +2,11 @@ package View;
 
 
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import de.toolforge.googlechartwrapper.Color;
 import de.toolforge.googlechartwrapper.Dimension;
 import de.toolforge.googlechartwrapper.PieChart;
@@ -59,10 +64,6 @@ public class PiechartWebServiceManager
 		}
 		
 	}
-		
-		
-		
-		
 	
 	// The URLs contain the individual pie charts.
 	public void printUrls()
@@ -87,12 +88,50 @@ public class PiechartWebServiceManager
 		}
 	}
 	
-	public boolean openWebPage()
+	public void createHTMLFileWithPieCharts()
 	{
-		return false;
+		try
+		{
+			PrintWriter writer = new PrintWriter("Charts/Charts.html", "UTF-8");
+			
+			writer.println("<!DOCTYPE html");
+			writer.println("<html>");
+			writer.println("<body>");
+			writer.println();
+			writer.println("<center>");
+			writer.println("<h1>HealthScreeningResults</h1>");
+			
+			writer.println("<h3>Total Cholesterol </h3>");
+			writer.println("<img src = " + pieCharts[0].getUrl() + ">");
+			
+			writer.println("<h3>Body Mass Index </h3>");
+			writer.println("<img src = " + pieCharts[1].getUrl() + ">");
+			
+			writer.println("<h3>Blood Pressure </h3>");
+			writer.println("<img src = " + pieCharts[2].getUrl() + ">");
+			
+			writer.println("</body>");
+			writer.println("</html>");
+			
+			writer.close();
+		}
+		catch (IOException ex)
+		{
+			System.out.println("Failed to save urls in pie chart file.");
+		}
 	}
-
-
-
-
+	
+	public void launchPiechartWebPage()
+	{
+		try
+		{
+			Desktop desktop = Desktop.getDesktop();
+			File file = new File("Charts/charts.html");
+			desktop.browse(file.toURI());
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 }
