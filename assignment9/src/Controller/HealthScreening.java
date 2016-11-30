@@ -285,7 +285,7 @@ public class HealthScreening {
 				
 
 				//f=df2.format(heightFeet);
-				i=df.format(heightFeet);
+				//i=df.format(i);
 
 				
 				String []data={"Health Screening for "+firstName.getText()+" "+lastName.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
