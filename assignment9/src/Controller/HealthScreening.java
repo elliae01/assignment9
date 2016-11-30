@@ -37,9 +37,10 @@ public class HealthScreening {
 	private JTextField cholesterol;
 	private JTextField weight;
 	private JTextField systolic;
-	private JTextField height;
+	private JTextField feet;
 	private JTextField diastolic;
 	private JTextField firstName;
+	private JTextField inches;
 
 	/**
 	 * Launch the application.
@@ -148,10 +149,10 @@ public class HealthScreening {
 		btnSubmit.setBounds(20, 329, 89, 23);
 		frmGlenview.getContentPane().add(btnSubmit);
 		
-		height = new JTextField();
-		height.setBounds(137, 219, 86, 20);
-		frmGlenview.getContentPane().add(height);
-		height.setColumns(10);
+		feet = new JTextField();
+		feet.setBounds(137, 219, 46, 20);
+		frmGlenview.getContentPane().add(feet);
+		feet.setColumns(10);
 		
 		JLabel lblHeight = new JLabel("Height");
 		lblHeight.setForeground(new Color(0, 102, 204));
@@ -194,7 +195,7 @@ public class HealthScreening {
 	       
 	       JLabel lblIn = new JLabel("feet");
 	       lblIn.setFont(new Font("Tahoma", Font.PLAIN, 10));
-	       lblIn.setBounds(225, 222, 46, 14);
+	       lblIn.setBounds(187, 222, 20, 14);
 	       frmGlenview.getContentPane().add(lblIn);
 	       
 	       JButton btnClearAll = new JButton("Clear All");
@@ -210,6 +211,16 @@ public class HealthScreening {
 	       lblFirstName.setForeground(new Color(0, 102, 204));
 	       lblFirstName.setBounds(63, 135, 67, 14);
 	       frmGlenview.getContentPane().add(lblFirstName);
+	       
+	       inches = new JTextField();
+	       inches.setBounds(215, 219, 42, 20);
+	       frmGlenview.getContentPane().add(inches);
+	       inches.setColumns(10);
+	       
+	       JLabel lblInches = new JLabel("inches");
+	       lblInches.setFont(new Font("Tahoma", Font.PLAIN, 10));
+	       lblInches.setBounds(259, 222, 42, 14);
+	       frmGlenview.getContentPane().add(lblInches);
 	       
 
 		
@@ -233,13 +244,14 @@ public class HealthScreening {
 				if(systolic.getText().equals("")){
 					systolic.setText("0");
 				}
-				if(height.getText().equals("")){
-					height.setText("0");
+				if(feet.getText().equals("")){
+					feet.setText("0");
 				}
 				if(diastolic.getText().equals("")){
 					diastolic.setText("0");
 				}
-				if(Integer.parseInt(age.getText())>=1&&Integer.parseInt(age.getText())<=110){
+				if(Integer.parseInt(age.getText())>=1&&Integer.parseInt(age.getText())<=110&&
+						Integer.parseInt(inches.getText())<12){
 					
 					
 					
@@ -247,11 +259,15 @@ public class HealthScreening {
 				PatientClassification classification = new PatientClassification();
 				
 				DecimalFormat df = new DecimalFormat("0.0");
-				DecimalFormat df2 = new DecimalFormat("0.#");
+				//DecimalFormat df2 = new DecimalFormat("0.#");
 				
-				String h = height.getText();
-				double heightFeet = Double.parseDouble(h);
+				String f = feet.getText();
+				double heightFeet = Double.parseDouble(f);
 				heightFeet=heightFeet*12;
+				
+				String i = inches.getText();
+				double heightInches = Double.parseDouble(i);
+				heightFeet=heightFeet+heightInches;
 				
 				double bmiCalc = bmi.calculateBmi(Double.parseDouble(weight.getText())
 						,heightFeet,true);
@@ -265,11 +281,12 @@ public class HealthScreening {
 				String bmiClassification = classification.BMI(bmiCalc);
 				
 
-				h=df2.format(heightFeet);
+				//f=df2.format(heightFeet);
+				i=df.format(heightFeet);
 
 				
 				String []data={"Health Screening for "+firstName.getText()+" "+lastName.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
-				+height.getText()+" feet"+"     "+"Weight: "+weight.getText()+" lbs.","\nBody Mass Index: "+bmiCalcFormatted+" "
+				+f+"' "+i+"\"     "+"Weight: "+weight.getText()+" lbs.","\nBody Mass Index: "+bmiCalcFormatted+" "
 				+bmiClassification,"Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
 				+systolic.getText()+"/"+diastolic.getText()+" "+bloodPressureClassification};
 				
@@ -280,7 +297,8 @@ public class HealthScreening {
 				pr.displayPatientReport(data);
 				
 				}else{
-					JOptionPane.showMessageDialog(frmGlenview, "The age entered is invalid.", "information",
+					JOptionPane.showMessageDialog(frmGlenview, "Invalid entry\n\nEnsure that age and height "
+							+ "are within exceptable limits", "information",
 							JOptionPane.INFORMATION_MESSAGE);
 				}
 			
@@ -359,7 +377,7 @@ public class HealthScreening {
 				cholesterol.setText("");
 				weight.setText("");
 				systolic.setText("");
-				height.setText("");
+				feet.setText("");
 				diastolic.setText("");
 				
 			}
