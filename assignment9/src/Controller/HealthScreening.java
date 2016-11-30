@@ -247,6 +247,9 @@ public class HealthScreening {
 				if(feet.getText().equals("")){
 					feet.setText("0");
 				}
+				if(inches.getText().equals("")){
+					inches.setText("0");
+				}
 				if(diastolic.getText().equals("")){
 					diastolic.setText("0");
 				}
@@ -297,7 +300,7 @@ public class HealthScreening {
 				pr.displayPatientReport(data);
 				
 				}else{
-					JOptionPane.showMessageDialog(frmGlenview, "Invalid entry\n\nEnsure that age and height "
+					JOptionPane.showMessageDialog(frmGlenview, "Invalid entry. Ensure that age and height "
 							+ "are within exceptable limits", "information",
 							JOptionPane.INFORMATION_MESSAGE);
 				}
@@ -378,6 +381,7 @@ public class HealthScreening {
 				weight.setText("");
 				systolic.setText("");
 				feet.setText("");
+				inches.setText("");
 				diastolic.setText("");
 				
 			}
