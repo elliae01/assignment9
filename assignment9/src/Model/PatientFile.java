@@ -19,8 +19,10 @@ public class PatientFile {
 
 	
 	public void outFile(String[]data,String date){
+			
 		try {
-			Writer fileWriter = new FileWriter(".//PatientHealthScreenData//"+date+"_out.txt",true);
+			
+			Writer fileWriter = new FileWriter("C:\\Patient_Health_Screen\\"+date+"_summary.txt",true);
 			
 			for(int i=0; i < data.length; i++){
 				fileWriter.append(data[i]+"\r\n");
