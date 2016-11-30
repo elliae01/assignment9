@@ -24,8 +24,10 @@ enum CHART_TYPE
 public class PiechartWebServiceManager 
 {
 	private final int CHART_COUNT = 3;
+	private final int WIDTH = 500;
+	private final int HEIGHT = 250;
 	
-	private Dimension chartDimensions = new Dimension(500, 250);
+	private Dimension chartDimensions = new Dimension(WIDTH, HEIGHT);
 	
 	private PieChart pieCharts[] = new PieChart[CHART_COUNT];
 	
@@ -102,13 +104,13 @@ public class PiechartWebServiceManager
 			writer.println("<h1>HealthScreeningResults</h1>");
 			
 			writer.println("<h3>Total Cholesterol </h3>");
-			writer.println("<img src = " + pieCharts[0].getUrl() + ">");
+			writer.println("<img src = \"" + pieCharts[0].getUrl() + "\" style=width:" + WIDTH + ";height:" + HEIGHT + ">");
 			
 			writer.println("<h3>Body Mass Index </h3>");
-			writer.println("<img src = " + pieCharts[1].getUrl() + ">");
+			writer.println("<img src = \"" + pieCharts[1].getUrl() + "\" style=width:" + WIDTH + ";height:" + HEIGHT + ">");
 			
 			writer.println("<h3>Blood Pressure </h3>");
-			writer.println("<img src = " + pieCharts[2].getUrl() + ">");
+			writer.println("<img src = \"" + pieCharts[2].getUrl() + "\" style=width:" + WIDTH + ";height:" + HEIGHT + ">");
 			
 			writer.println("</body>");
 			writer.println("</html>");
