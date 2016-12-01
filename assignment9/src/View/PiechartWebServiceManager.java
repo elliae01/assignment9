@@ -1,7 +1,5 @@
 package View;
 
-
-
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
@@ -48,7 +46,6 @@ public class PiechartWebServiceManager
 	
 	public void addPieSlice(CHART_TYPE type, String label, int value)
 	{
-		
 		switch (type)
 		{
 		case totalCholesterol:
@@ -117,9 +114,10 @@ public class PiechartWebServiceManager
 			
 			writer.close();
 		}
-		catch (IOException ex)
+		catch (IOException e)
 		{
 			System.out.println("Failed to save urls in pie chart file.");
+			e.printStackTrace();
 		}
 	}
 	
@@ -133,6 +131,7 @@ public class PiechartWebServiceManager
 		}
 		catch (Exception e)
 		{
+			System.out.println("Failed to open charts file.");
 			e.printStackTrace();
 		}
 	}
