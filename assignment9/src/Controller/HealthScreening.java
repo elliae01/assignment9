@@ -289,9 +289,9 @@ public class HealthScreening {
 
 				
 				String []data={"Health Screening for "+firstName.getText()+" "+lastName.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
-				+f+"' "+i+"\"     "+"Weight: "+weight.getText()+" lbs.","\nBody Mass Index: "+bmiCalcFormatted+" "
-				+bmiClassification,"Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
-				+systolic.getText()+"/"+diastolic.getText()+" "+bloodPressureClassification};
+				+f+"' "+i+"\"     "+"Weight: "+weight.getText()+" lbs.","\nBody Mass Index is "+bmiClassification+": "
+				+bmiCalcFormatted,"Total Cholesterol is "+cholesterolClassification+": "+cholesterol.getText(),"Blood Pressure is "
+				+bloodPressureClassification+": "+systolic.getText()+"/"+diastolic.getText()};
 				
 				PatientFile patientfile = new PatientFile();
 				patientfile.outFile(data,date.getText());
@@ -334,9 +334,9 @@ public class HealthScreening {
 				PatientFile patientfile = new PatientFile();
 				String[]inFile=patientfile.inFile(selectedFile);
 				
+				
 				PatientSummary sum = new PatientSummary();
 				sum.summary(inFile,date.getText());
-
 
 			}
 		});
@@ -368,6 +368,8 @@ public class HealthScreening {
 				
 				PiechartUIinterface pi = new PiechartUIinterface();
 				pi.chartExport(inFile);
+				
+				
 				
 			}
 		});

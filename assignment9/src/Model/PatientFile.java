@@ -26,7 +26,9 @@ public class PatientFile {
 			
 			for(int i=0; i < data.length; i++){
 				fileWriter.append(data[i]+"\r\n");
+				
 			}
+			
 			fileWriter.append("\r\n");
 			fileWriter.close();
 			

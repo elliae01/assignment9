@@ -11,10 +11,10 @@ public class PatientSummary {
 	public void summary(String[]data, String date){
 		
 		String[]classifications={"DESIRABLE","BORDERLINE","HIGH","UNDERWEIGHT",
-				"NORMAL","OVERWEIGHT","OBESE"," NORMAL ","PREHYPERTENSION",
+				"Body Mass Index is NORMAL","OVERWEIGHT","OBESE","Blood Pressure is NORMAL","PREHYPERTENSION",
 				"STAGE 1 HYPERTENSION","STAGE 2 HYPERTENSION", "HYPERTENSIVE CRISIS"};
 		int[]total = new int[12];
-		
+
 		for(int j=0;j<classifications.length;j++){
 			int k=0;
 			for(int i=0;i<data.length;i++){
@@ -25,6 +25,7 @@ public class PatientSummary {
 			}
 			total[j]=k;
 		}
+
 		int sum=total[0]+total[1]+total[2];
 		System.out.println("Health Screening Results\n");
 		System.out.println(data[2]);
