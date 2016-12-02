@@ -40,7 +40,7 @@ public class HealthScreening {
 	private JTextField feet;
 	private JTextField diastolic;
 	private JTextField firstName;
-	private JTextField inches;
+	private JTextField inches;//22
 
 	/**
 	 * Launch the application.
