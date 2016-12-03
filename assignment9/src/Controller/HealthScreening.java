@@ -257,9 +257,9 @@ public class HealthScreening {
 				if(diastolic.getText().equals("")){
 					diastolic.setText("0");
 				}
-				if(Integer.parseInt(age.getText())>=1&&Integer.parseInt(age.getText())<=110&&
-						Integer.parseInt(inches.getText())<12){
-					
+				if(Integer.parseInt(age.getText())>=1&&Integer.parseInt(age.getText())<=110){
+					if(Integer.parseInt(inches.getText())<12){
+						
 				BmiCalculator bmi = new BmiCalculator();
 				PatientClassification classification = new PatientClassification();
 				
@@ -293,8 +293,11 @@ public class HealthScreening {
 				pr.displayPatientReport(data);
 				
 				}else{
-					JOptionPane.showMessageDialog(frmGlenview, "Invalid entry. Ensure that age and height "
-							+ "are within exceptable limits", "information",
+					JOptionPane.showMessageDialog(frmGlenview, "Invalid entry. Ensure number of inches are less than 12", "information",
+							JOptionPane.INFORMATION_MESSAGE);
+				}
+				}else{
+					JOptionPane.showMessageDialog(frmGlenview, "Invalid entry. Enter age between 1 and 110.", "information",
 							JOptionPane.INFORMATION_MESSAGE);
 				}
 
