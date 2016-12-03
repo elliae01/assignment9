@@ -4,6 +4,7 @@ import Model.BmiCalculator;
 import Model.PatientFile;
 import Model.PatientClassification;
 import View.PiechartUIinterface;
+import View.PiechartWebServiceManager;
 import View.PatientReport;
 import View.PatientSummary;
 
@@ -55,6 +56,7 @@ public class HealthScreening {
 					e.printStackTrace();
 				}
 				new File("C:\\Patient_Health_Screen\\").mkdir();
+				new File("C:\\Patient_Health_Screen\\Chart\\").mkdir();
 			}
 		});
 	}
@@ -367,7 +369,11 @@ public class HealthScreening {
 				String[]inFile=patientfile.inFile(selectedFile);
 				
 				PiechartUIinterface pi = new PiechartUIinterface();
-				pi.chartExport(inFile);
+				String[]url=pi.chartExport(inFile);
+				
+				PiechartWebServiceManager ws = new PiechartWebServiceManager();
+				ws.createHTMLFileWithPieCharts(url);
+				ws.launchPiechartWebPage();
 				
 				
 				
