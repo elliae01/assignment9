@@ -1,11 +1,6 @@
 package View;
 
-import java.awt.Desktop;
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 import de.toolforge.googlechartwrapper.Color;
@@ -107,7 +102,7 @@ public class PiechartWebServiceManager
 			writer.println("<body>");
 			writer.println();
 			writer.println("<center>");
-			writer.println("<h1>HealthScreeningResults</h1>");
+			writer.println("<h1>Health Screening Results</h1>");
 			
 			writer.println("<h3></h3>");
 			writer.println("<img src = \"" + url[0] + "\" style=width:" + WIDTH + ";height:" + HEIGHT + ">");
