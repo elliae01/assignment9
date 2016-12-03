@@ -307,7 +307,7 @@ public class HealthScreening {
 
 
 			public void actionPerformed(ActionEvent e) {
-				//JOptionPane.INFORMATION_MESSAGE("great\nnouse", "bird", 1);
+				
 				JFileChooser fileChooser = new JFileChooser();
 				fileChooser.setCurrentDirectory(new java.io.File("C:\\Patient_Health_Screen"));
 				int result = fileChooser.showOpenDialog(null);
