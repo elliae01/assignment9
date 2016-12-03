@@ -13,8 +13,7 @@ public class PatientSummary {
 				"Index: NORMAL","OVERWEIGHT","OBESE","Blood Pressure: NORMAL","PREHYPERTENSION",
 				"STAGE 1 HYPERTENSION","STAGE 2 HYPERTENSION", "HYPERTENSIVE CRISIS"};
 		int[]total = new int[12];
-		//Matcher matcher;
-		//Pattern pattern; 
+
 		for(int j=0;j<classifications.length;j++){
 			int k=0;
 			for(int i=0;i<data.length;i++){
@@ -22,11 +21,6 @@ public class PatientSummary {
 				   k=k+1;
 				   
 				  }
-			 // pattern= Pattern.compile(classifications[j]);
-			  //matcher = pattern.matcher(classifications[j]);
-			 // if( matcher == matcher(classifications[j])){
-				  
-			 // }
 			}
 			total[j]=k;
 		}
