@@ -227,7 +227,11 @@ public class HealthScreening {
 	       frmGlenview.getContentPane().add(lblInches);
 	       
 
-		
+		/**
+		 * When the user submits patient data, the data will be appended
+		 * to an output file. The patient report will subsequently be 
+		 * displayed.
+		 */
 		btnSubmit.addActionListener(new ActionListener() {
 
 
