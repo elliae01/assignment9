@@ -15,7 +15,7 @@ public class PiechartUIinterface  {
 	public String[] chartExport(String[]data){
 		
 		String[]classifications={"DESIRABLE","BORDERLINE","HIGH","UNDERWEIGHT",
-				"Body Mass Index is NORMAL","OVERWEIGHT","OBESE","Blood Pressure is NORMAL","PREHYPERTENSION",
+				"NORMAL","OVERWEIGHT","OBESE","NORMAL","PREHYPERTENSION",
 				"STAGE 1 HYPERTENSION","STAGE 2 HYPERTENSION", "HYPERTENSIVE CRISIS"};
 		int[]total = new int[12];
 		

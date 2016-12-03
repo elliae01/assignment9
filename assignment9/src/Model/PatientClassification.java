@@ -7,8 +7,8 @@ public class PatientClassification {
 	
 	public PatientClassification(){
 	cholesterol=new String[]{"DESIRABLE","BORDERLINE","HIGH"};
-	BMI=new String[]{"UNDERWEIGHT","NORMAL","OVERWEIGHT","OBESE"};
-	bloodpressure=new String[]{"NORMAL","PREHYPERTENSION","STAGE 1 HYPERTENSION",
+	BMI=new String[]{"UNDERWEIGHT","Index: NORMAL","OVERWEIGHT","OBESE"};
+	bloodpressure=new String[]{"Blood Pressure: NORMAL","PREHYPERTENSION","STAGE 1 HYPERTENSION",
 			"STAGE 2 HYPERTENSION","HYPERTENSIVE CRISIS"};
 	}
 

@@ -18,6 +18,8 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
@@ -258,13 +260,10 @@ public class HealthScreening {
 				if(Integer.parseInt(age.getText())>=1&&Integer.parseInt(age.getText())<=110&&
 						Integer.parseInt(inches.getText())<12){
 					
-					
-					
 				BmiCalculator bmi = new BmiCalculator();
 				PatientClassification classification = new PatientClassification();
 				
 				DecimalFormat df = new DecimalFormat("0.0");
-				//DecimalFormat df2 = new DecimalFormat("0.#");
 				
 				String f = feet.getText();
 				double heightFeet = Double.parseDouble(f);
@@ -279,22 +278,13 @@ public class HealthScreening {
 			
 				String bmiCalcFormatted = df.format(bmiCalc);
 				String bmiClassification = classification.BMI(Double.parseDouble(bmiCalcFormatted));
-				
 				String bloodPressureClassification = classification.bloodPressure(Integer.parseInt(systolic.getText()),Integer.parseInt(diastolic.getText()));
-				
 				String cholesterolClassification = classification.Cholesterol(Integer.parseInt(cholesterol.getText()));
 				
-				
-				
-
-				//f=df2.format(heightFeet);
-				//i=df.format(i);
-
-				
 				String []data={"Health Screening for "+firstName.getText()+" "+lastName.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
-				+f+"' "+i+"\"     "+"Weight: "+weight.getText()+" lbs.","\nBody Mass Index is "+bmiClassification+": "
-				+bmiCalcFormatted,"Total Cholesterol is "+cholesterolClassification+": "+cholesterol.getText(),"Blood Pressure is "
-				+bloodPressureClassification+": "+systolic.getText()+"/"+diastolic.getText()};
+				+f+"' "+i+"\"     "+"Weight: "+weight.getText()+" lbs.","\nBody Mass Index: "+bmiCalcFormatted+" "
+				+bmiClassification,"Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
+				+systolic.getText()+"/"+diastolic.getText()+" "+bloodPressureClassification};
 				
 				PatientFile patientfile = new PatientFile();
 				patientfile.outFile(data,date.getText());
@@ -307,7 +297,6 @@ public class HealthScreening {
 							+ "are within exceptable limits", "information",
 							JOptionPane.INFORMATION_MESSAGE);
 				}
-			
 
 			}
 		});
@@ -385,14 +374,160 @@ public class HealthScreening {
 
 			public void actionPerformed(ActionEvent e) {
 				lastName.setText("");
+				firstName.setText("");
 				age.setText("");
-				cholesterol.setText("");
 				weight.setText("");
-				systolic.setText("");
 				feet.setText("");
 				inches.setText("");
+				cholesterol.setText("");
+				systolic.setText("");
 				diastolic.setText("");
 				
+			}
+		});
+		
+		lastName.addKeyListener(new KeyAdapter(){
+			
+			public void keyTyped(KeyEvent e){
+				if (e.getKeyChar()==KeyEvent.VK_ENTER){
+					firstName.requestFocus();
+					firstName.selectAll();
+				}
+			}
+		});
+		firstName.addKeyListener(new KeyAdapter(){
+			
+			public void keyTyped(KeyEvent e){
+				if (e.getKeyChar()==KeyEvent.VK_ENTER){
+					age.requestFocus();
+					age.selectAll();
+				}
+			}
+		});
+		age.addKeyListener(new KeyAdapter(){
+			
+			public void keyTyped(KeyEvent e){
+				if (e.getKeyChar()=='.'){
+					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
+				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
+				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
+					weight.requestFocus();
+					weight.selectAll();
+				}else if (e.getKeyChar()>'9'|e.getKeyChar()<'0'){
+					JOptionPane.showMessageDialog(frmGlenview, "Need to enter a number.","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
+				}
+			}
+		});
+		weight.addKeyListener(new KeyAdapter(){
+			
+			public void keyTyped(KeyEvent e){
+				if (e.getKeyChar()=='.'){
+					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
+				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
+				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
+					feet.requestFocus();
+					feet.selectAll();
+				}else if (e.getKeyChar()>'9'|e.getKeyChar()<'0'){
+					JOptionPane.showMessageDialog(frmGlenview, "Need to enter a number.","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
+				}
+			}
+		});
+		feet.addKeyListener(new KeyAdapter(){
+			
+			public void keyTyped(KeyEvent e){
+				if (e.getKeyChar()=='.'){
+					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
+				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
+				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
+					inches.requestFocus();
+					inches.selectAll();
+				}else if (e.getKeyChar()>'9'|e.getKeyChar()<'0'){
+					JOptionPane.showMessageDialog(frmGlenview, "Need to enter a number.","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
+				}
+			}
+		});
+		inches.addKeyListener(new KeyAdapter(){
+			
+			public void keyTyped(KeyEvent e){
+				if (e.getKeyChar()=='.'){
+					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
+				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
+				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
+					cholesterol.requestFocus();
+					cholesterol.selectAll();
+				}else if (e.getKeyChar()>'9'|e.getKeyChar()<'0'){
+					JOptionPane.showMessageDialog(frmGlenview, "Need to enter a number.","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
+				}
+			}
+		});
+		cholesterol.addKeyListener(new KeyAdapter(){
+			
+			public void keyTyped(KeyEvent e){
+				if (e.getKeyChar()=='.'){
+					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
+				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
+				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
+					systolic.requestFocus();
+					systolic.selectAll();
+				}else if (e.getKeyChar()>'9'|e.getKeyChar()<'0'){
+					JOptionPane.showMessageDialog(frmGlenview, "Need to enter a number.","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
+				}
+			}
+		});
+		systolic.addKeyListener(new KeyAdapter(){
+			
+			public void keyTyped(KeyEvent e){
+				if (e.getKeyChar()=='.'){
+					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
+				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
+				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
+					diastolic.requestFocus();
+					diastolic.selectAll();
+				}else if (e.getKeyChar()>'9'|e.getKeyChar()<'0'){
+					JOptionPane.showMessageDialog(frmGlenview, "Need to enter a number.","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
+				}
+			}
+		});
+		diastolic.addKeyListener(new KeyAdapter(){
+			
+			public void keyTyped(KeyEvent e){
+				if (e.getKeyChar()=='.'){
+					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
+				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
+				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
+					lastName.requestFocus();
+					lastName.selectAll();
+				}else if (e.getKeyChar()>'9'|e.getKeyChar()<'0'){
+					JOptionPane.showMessageDialog(frmGlenview, "Need to enter a number.","Information"
+							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
+				}
 			}
 		});
 	}
