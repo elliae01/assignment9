@@ -230,7 +230,7 @@ public class HealthScreening {
 		/**
 		 * When the user submits patient data, the data will be appended
 		 * to an output file. The patient report will subsequently be 
-		 * displayed.
+		 * displayed..
 		 */
 		btnSubmit.addActionListener(new ActionListener() {
 
