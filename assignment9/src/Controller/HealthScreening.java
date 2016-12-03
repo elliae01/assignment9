@@ -297,8 +297,8 @@ public class HealthScreening {
 				+bmiClassification+"","Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
 				+systolic.getText()+"/"+diastolic.getText()+" "+bloodPressureClassification+""};
 				
-				PatientReport pr = new PatientReport();
-				pr.displayPatientReport(data);
+				PatientReport pr = new PatientReport(data);
+				pr.report();
 				
 				String []data2={"Health Screening for "+firstName.getText()+" "+lastName.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
 				+f+"' "+i+"\"     "+"Weight: "+weight.getText(),"\nBody Mass Index: "+bmiCalcFormatted+"% "

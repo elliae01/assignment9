@@ -23,7 +23,7 @@ public class PatientClassification {
 			if(calc>=240){
 				return cholesterol[2];
 			}else{
-				return "n/a";
+				return "";
 			}	
 	}
 	public String BMI(double calc){
@@ -40,7 +40,7 @@ public class PatientClassification {
 		if(calc>=30){
 			return BMI[3];
 		}else{
-			return "n/a";
+			return "";
 		}
 	}
 	public String bloodPressure(int sys,int dias){
@@ -60,7 +60,7 @@ public class PatientClassification {
 		if(sys>180&&dias>110){
 			return bloodpressure[4];
 		}else{
-			return "n/a";
+			return "";
 		}
 	}
 }
