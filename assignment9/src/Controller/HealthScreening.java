@@ -303,6 +303,9 @@ public class HealthScreening {
 
 			}
 		});
+		/**
+		 * Add button function to display the totals of patient and classifications
+		 */
 		btnPrintSummary.addActionListener(new ActionListener() {
 
 
