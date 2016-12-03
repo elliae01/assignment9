@@ -2,7 +2,6 @@ package View;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import de.toolforge.googlechartwrapper.Color;
 import de.toolforge.googlechartwrapper.Dimension;
 import de.toolforge.googlechartwrapper.PieChart;
