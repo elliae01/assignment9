@@ -236,6 +236,9 @@ public class HealthScreening {
 				if(lastName.getText().equals("")){
 					lastName.setText("n/a");
 				}
+				if(firstName.getText().equals("")){
+					firstName.setText("n/a");
+				}
 				if(age.getText().equals("")){
 					age.setText("0");
 				}
