@@ -32,7 +32,7 @@ public class PatientSummary {
 		System.out.println("Number of Individuals Screened: "+sum);
 		System.out.println("\nTotal Cholesterol\n");
 		System.out.println("DESIRABLE                   "+total[0]);
-		System.out.println("BORDERLINE                  "+total[1]);
+		System.out.println("BORDERLINE HIGH             "+total[1]);
 		System.out.println("HIGH                        "+total[2]);
 		System.out.println("\nBody Mass Index\n");
 		System.out.println("UNDERWEIGHT                 "+total[3]);

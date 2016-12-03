@@ -6,7 +6,7 @@ public class PatientClassification {
 	String[]bloodpressure;
 	
 	public PatientClassification(){
-	cholesterol=new String[]{"DESIRABLE","BORDERLINE HIGH","HIGH"};
+	cholesterol=new String[]{"DESIRABLE","BORDERLINE","HIGH"};
 	BMI=new String[]{"UNDERWEIGHT","NORMAL","OVERWEIGHT","OBESE"};
 	bloodpressure=new String[]{"NORMAL","PREHYPERTENSION","STAGE 1 HYPERTENSION",
 			"STAGE 2 HYPERTENSION","HYPERTENSIVE CRISIS"};
@@ -57,7 +57,7 @@ public class PatientClassification {
 		if(sys>=160&&sys<=180||dias>=100&&dias<=110){
 			return bloodpressure[3];
 		}
-		if(sys>=180&&sys<=110){
+		if(sys>180&&dias>110){
 			return bloodpressure[4];
 		}else{
 			return "n/a";

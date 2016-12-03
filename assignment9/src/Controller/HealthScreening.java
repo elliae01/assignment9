@@ -278,12 +278,13 @@ public class HealthScreening {
 						,heightFeet,true);
 			
 				String bmiCalcFormatted = df.format(bmiCalc);
+				String bmiClassification = classification.BMI(Double.parseDouble(bmiCalcFormatted));
 				
 				String bloodPressureClassification = classification.bloodPressure(Integer.parseInt(systolic.getText()),Integer.parseInt(diastolic.getText()));
 				
 				String cholesterolClassification = classification.Cholesterol(Integer.parseInt(cholesterol.getText()));
 				
-				String bmiClassification = classification.BMI(bmiCalc);
+				
 				
 
 				//f=df2.format(heightFeet);

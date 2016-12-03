@@ -33,20 +33,20 @@ public class PiechartUIinterface  {
 
 		PiechartWebServiceManager pc = new PiechartWebServiceManager();
 		
-		pc.addPieSlice(CHART_TYPE.totalCholesterol, "High", total[0]);
+		pc.addPieSlice(CHART_TYPE.totalCholesterol, "Desirable", total[0]);
 		pc.addPieSlice(CHART_TYPE.totalCholesterol, "Borderline High", total[1]);
-		pc.addPieSlice(CHART_TYPE.totalCholesterol, "Desirable", total[2]);
+		pc.addPieSlice(CHART_TYPE.totalCholesterol, "High", total[2]);
+
+		pc.addPieSlice(CHART_TYPE.BMI, "Underweight", total[3]);
+		pc.addPieSlice(CHART_TYPE.BMI, "Normal", total[4]);
+		pc.addPieSlice(CHART_TYPE.BMI, "Overweight",total[5]);
+		pc.addPieSlice(CHART_TYPE.BMI, "Obese", total[6]);
 		
-		pc.addPieSlice(CHART_TYPE.BMI, "Overweight", total[3]);
-		pc.addPieSlice(CHART_TYPE.BMI, "Obese", total[4]);
-		pc.addPieSlice(CHART_TYPE.BMI, "Underweight",total[5]);
-		pc.addPieSlice(CHART_TYPE.BMI, "Normal", total[6]);
-		
-		pc.addPieSlice(CHART_TYPE.bloodPressure, "Stage 1 Hypertension",total[7]);
-		pc.addPieSlice(CHART_TYPE.bloodPressure, "Stage 2 Hypertension", total[8]);
-		pc.addPieSlice(CHART_TYPE.bloodPressure, "Hypertensive Crisis", total[9]);
-		pc.addPieSlice(CHART_TYPE.bloodPressure, "Normal", total[10]);
-		pc.addPieSlice(CHART_TYPE.bloodPressure, "Prehypertension", total[11]);;
+		pc.addPieSlice(CHART_TYPE.bloodPressure, "Normal",total[7]);
+		pc.addPieSlice(CHART_TYPE.bloodPressure, "Prehypertension", total[8]);
+		pc.addPieSlice(CHART_TYPE.bloodPressure, "Stage 1 Hypertension", total[9]);
+		pc.addPieSlice(CHART_TYPE.bloodPressure, "Stage 2 Hypertension", total[10]);
+		pc.addPieSlice(CHART_TYPE.bloodPressure, "Hypertensive Crisis", total[11]);;
 		
 		url=new String[3];
 		url[0]=pc.getUrl(CHART_TYPE.totalCholesterol);
