@@ -7,10 +7,11 @@ public class PatientSummary {
 		
 	}
 	
-	public void summary(String[]data, String date){
+	public void summary(String[]data){
+		
 		
 		String[]classifications={"DESIRABLE","BORDERLINE","HIGH","UNDERWEIGHT",
-				"Index: NORMAL","OVERWEIGHT","OBESE","Blood Pressure: NORMAL","PREHYPERTENSION",
+				"% NORMAL","OVERWEIGHT","OBESE","*NORMAL","PREHYPERTENSION",
 				"STAGE 1 HYPERTENSION","STAGE 2 HYPERTENSION", "HYPERTENSIVE CRISIS"};
 		int[]total = new int[12];
 

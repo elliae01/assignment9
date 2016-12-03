@@ -43,7 +43,8 @@ public class HealthScreening {
 	private JTextField feet;
 	private JTextField diastolic;
 	private JTextField firstName;
-	private JTextField inches;//22
+	private JTextField inches;
+
 
 	/**
 	 * Launch the application.
@@ -280,8 +281,11 @@ public class HealthScreening {
 				double heightInches = Double.parseDouble(i);
 				heightFeet=heightFeet+heightInches;
 				
-				double bmiCalc = bmi.calculateBmi(Double.parseDouble(weight.getText())
+				double bmiCalc = 0;
+				if(heightFeet>0||Double.parseDouble(weight.getText())>0){
+				 bmiCalc= bmi.calculateBmi(Double.parseDouble(weight.getText())
 						,heightFeet,true);
+				}
 			
 				String bmiCalcFormatted = df.format(bmiCalc);
 				String bmiClassification = classification.BMI(Double.parseDouble(bmiCalcFormatted));
@@ -289,15 +293,23 @@ public class HealthScreening {
 				String cholesterolClassification = classification.Cholesterol(Integer.parseInt(cholesterol.getText()));
 				
 				String []data={"Health Screening for "+firstName.getText()+" "+lastName.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
-				+f+"' "+i+"\"     "+"Weight: "+weight.getText()+" lbs.","\nBody Mass Index: "+bmiCalcFormatted+" "
-				+bmiClassification,"Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
-				+systolic.getText()+"/"+diastolic.getText()+" "+bloodPressureClassification};
-				
-				PatientFile patientfile = new PatientFile();
-				patientfile.outFile(data,date.getText());
+				+f+"' "+i+"\"     "+"Weight: "+weight.getText(),"\nBody Mass Index: "+bmiCalcFormatted+" "
+				+bmiClassification+"","Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
+				+systolic.getText()+"/"+diastolic.getText()+" "+bloodPressureClassification+""};
 				
 				PatientReport pr = new PatientReport();
 				pr.displayPatientReport(data);
+				
+				String []data2={"Health Screening for "+firstName.getText()+" "+lastName.getText(), "\nDate: "+date.getText(),"Age: "+age.getText()+"     "+"Height: "
+				+f+"' "+i+"\"     "+"Weight: "+weight.getText(),"\nBody Mass Index: "+bmiCalcFormatted+"% "
+				+bmiClassification+"","Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
+				+systolic.getText()+"/"+diastolic.getText()+" *"+bloodPressureClassification};
+
+				
+				PatientFile patientfile = new PatientFile();
+				patientfile.outFile(data2,date.getText());
+				
+
 				
 				}else{
 					JOptionPane.showMessageDialog(frmGlenview, "Invalid entry. Ensure number of inches are less than 12", "information",
@@ -329,7 +341,6 @@ public class HealthScreening {
 				}
 				else if (result == JFileChooser.CANCEL_OPTION) {
 				    System.out.println("Cancel was selected");
-				    //System.exit(0);
 				    
 				}
 				else if(selectedFile==null){
@@ -341,7 +352,7 @@ public class HealthScreening {
 				
 				
 				PatientSummary sum = new PatientSummary();
-				sum.summary(inFile,date.getText());
+				sum.summary(inFile);
 
 			}
 		});
