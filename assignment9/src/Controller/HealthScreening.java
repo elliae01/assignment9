@@ -84,6 +84,9 @@ public class HealthScreening {
 		frmGlenview.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmGlenview.getContentPane().setLayout(null);
 		
+		ImageIcon img = new ImageIcon(HealthScreening.class.getResource("/images/glen5.PNG"));
+		frmGlenview.setIconImage(img.getImage());
+		
 		JLabel b2 = new JLabel(new ImageIcon(HealthScreening.class.getResource("/images/glenview2.PNG")));
 		b2.setBounds(0, 0, 196, 61);
 		frmGlenview.getContentPane().add(b2);
