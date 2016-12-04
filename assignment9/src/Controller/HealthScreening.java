@@ -191,7 +191,7 @@ public class HealthScreening {
 		frmGlenview.getContentPane().add(btnExport);
 		
 		   //getting current date and time using Date class
-	       DateFormat df = new SimpleDateFormat("MM-dd-yyyy");
+	       DateFormat df = new SimpleDateFormat("  MM-dd-yyyy");
 	       Calendar calobj = Calendar.getInstance();
 	       //System.out.println(df.format(calobj.getTime()));
 	       date.setText(df.format(calobj.getTime()));
