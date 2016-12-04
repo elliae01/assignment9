@@ -17,12 +17,15 @@ public class PatientFile {
 		
 	}
 
+	public String pathForDate(String date) {
+		return "C:\\Patient_Health_Screen\\"+date+"_summary.txt";
+	}
 	
 	public void outFile(String[]data,String date){
 			
 		try {
 			
-			Writer fileWriter = new FileWriter("C:\\Patient_Health_Screen\\"+date+"_summary.txt",true);
+			Writer fileWriter = new FileWriter(pathForDate(date),true);
 			
 			for(int i=0; i < data.length; i++){
 				fileWriter.append(data[i]+"\r\n");
