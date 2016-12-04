@@ -20,11 +20,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.Closeable;
 import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.EmptyStackException;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -340,7 +344,11 @@ public class HealthScreening {
 				
 				if (result == JFileChooser.APPROVE_OPTION) {
 				    selectedFile = fileChooser.getSelectedFile();
-				    //System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+					PatientFile patientfile = new PatientFile();
+					String[]inFile=patientfile.inFile(selectedFile);
+					
+					PatientSummary sum = new PatientSummary();
+					sum.summary(inFile);
 				}
 				else if (result == JFileChooser.CANCEL_OPTION) {
 				    System.out.println("Cancel was selected");
@@ -350,12 +358,6 @@ public class HealthScreening {
 					System.out.println("no file selected");
 					//System.exit(0);
 				}
-				PatientFile patientfile = new PatientFile();
-				String[]inFile=patientfile.inFile(selectedFile);
-				
-				
-				PatientSummary sum = new PatientSummary();
-				sum.summary(inFile);
 
 			}
 		});
@@ -371,29 +373,28 @@ public class HealthScreening {
 				
 				if (result == JFileChooser.APPROVE_OPTION) {
 				    selectedFile = fileChooser.getSelectedFile();
-				    //System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+					PatientFile patientfile = new PatientFile();
+					String[]inFile=patientfile.inFile(selectedFile);
+					
+					PiechartUIinterface pi = new PiechartUIinterface();
+					String[]url=pi.chartExport(inFile);
+					
+					PiechartWebServiceManager ws = new PiechartWebServiceManager();
+					ws.createHTMLFileWithPieCharts(url);
+					ws.launchPiechartWebPage();
 				}
 				else if (result == JFileChooser.CANCEL_OPTION) {
 				    System.out.println("Cancel was selected");
 				    //System.exit(0);
-				    
+				    btnExport.requestFocus();
+
 				}
 				else if(selectedFile==null){
+					
 					System.out.println("no file selected");
-					//System.exit(0);
+					
 				}
-				PatientFile patientfile = new PatientFile();
-				String[]inFile=patientfile.inFile(selectedFile);
-				
-				PiechartUIinterface pi = new PiechartUIinterface();
-				String[]url=pi.chartExport(inFile);
-				
-				PiechartWebServiceManager ws = new PiechartWebServiceManager();
-				ws.createHTMLFileWithPieCharts(url);
-				ws.launchPiechartWebPage();
-				
-				
-				
+		
 			}
 		});
 		btnClearAll.addActionListener(new ActionListener() {
