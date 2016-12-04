@@ -351,6 +351,11 @@ public class HealthScreening {
 					PatientFile patientfile = new PatientFile();
 					String[]inFile=patientfile.inFile(selectedFile);
 					
+					/*
+					 * Instantiate PatientSummary class and pass in 
+					 * patient summary data for the specific data to 
+					 * be printed to the console
+					 */
 					PatientSummary sum = new PatientSummary();
 					sum.summary(inFile);
 				}
@@ -386,9 +391,16 @@ public class HealthScreening {
 					PatientFile patientfile = new PatientFile();
 					String[]inFile=patientfile.inFile(selectedFile);
 					
+					/*
+					 * Instantiate PiechartUIinterface class and pass in data
+					 * to generate a pieChart and URL
+					 */
 					PiechartUIinterface pi = new PiechartUIinterface();
 					String[]url=pi.chartExport(inFile);
-					
+					/*
+					 * Instantiate PiechartWebServiceManager class and pass in 
+					 * URL.  The PieCharts open in Internet Explorer.
+					 */
 					PiechartWebServiceManager ws = new PiechartWebServiceManager();
 					ws.createHTMLFileWithPieCharts(url);
 					ws.launchPiechartWebPage();
