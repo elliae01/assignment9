@@ -385,7 +385,6 @@ public class HealthScreening {
 				}
 				else if (result == JFileChooser.CANCEL_OPTION) {
 				    System.out.println("Cancel was selected");
-				    //System.exit(0);
 				    btnExport.requestFocus();
 
 				}
