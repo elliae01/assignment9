@@ -273,8 +273,10 @@ public class HealthScreening {
 				}
 				if(Integer.parseInt(age.getText())>=1&&Integer.parseInt(age.getText())<=110){
 					if(Integer.parseInt(inches.getText())<12){
-						
+				
+				
 				BmiCalculator bmi = new BmiCalculator();
+				//instantiate class to get patient classifications
 				PatientClassification classification = new PatientClassification();
 				
 				DecimalFormat df = new DecimalFormat("0.0");
@@ -288,6 +290,7 @@ public class HealthScreening {
 				heightFeet=heightFeet+heightInches;
 				
 				double bmiCalc = 0;
+				//return results from BeetleDev web service
 				if(heightFeet>0||Double.parseDouble(weight.getText())>0){
 				 bmiCalc= bmi.calculateBmi(Double.parseDouble(weight.getText())
 						,heightFeet,true);
@@ -303,6 +306,7 @@ public class HealthScreening {
 				+bmiClassification+"","Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
 				+systolic.getText()+"/"+diastolic.getText()+" "+bloodPressureClassification+""};
 				
+				//instantiate class to print patient report to console
 				PatientReport pr = new PatientReport(data);
 				pr.report();
 				
@@ -311,11 +315,10 @@ public class HealthScreening {
 				+bmiClassification+"","Total Cholesterol: "+cholesterol.getText()+" "+cholesterolClassification,"Blood Pressure: "
 				+systolic.getText()+"/"+diastolic.getText()+" *"+bloodPressureClassification};
 
-				
+				//instantiate patient file class to generate an output file
 				PatientFile patientfile = new PatientFile();
 				patientfile.outFile(data2,date.getText());
 				
-
 				
 				}else{
 					JOptionPane.showMessageDialog(frmGlenview, "Invalid entry. Ensure number of inches are less than 12", "information",
@@ -329,7 +332,9 @@ public class HealthScreening {
 			}
 		});
 		/**
-		 * Add button function to display the totals of patient and classifications
+		 * When the Summary button is selected:
+		 * Display the totals of patients and classifications associated
+		 * with Cholesterol, BMI, and Blood Pressure.
 		 */
 		btnPrintSummary.addActionListener(new ActionListener() {
 
@@ -360,6 +365,12 @@ public class HealthScreening {
 
 			}
 		});
+		/**
+		 * When the Export button is selected:
+		 * Takes data from the input file.
+		 * Generates Pie Charts from the google chart wrapper class 
+		 * which is handled by the PiechartWebServiceManger class
+		 */
 		btnExport.addActionListener(new ActionListener() {
 
 
@@ -395,6 +406,10 @@ public class HealthScreening {
 		
 			}
 		});
+		/**
+		 * When the Clear button is selected:
+		 * return all values of the textfields to null.
+		 */
 		btnClearAll.addActionListener(new ActionListener() {
 
 
@@ -411,7 +426,9 @@ public class HealthScreening {
 				
 			}
 		});
-		
+		/**
+		 * When enter key is selected move to next field
+		 */
 		lastName.addKeyListener(new KeyAdapter(){
 			
 			public void keyTyped(KeyEvent e){
@@ -421,6 +438,9 @@ public class HealthScreening {
 				}
 			}
 		});
+		/**
+		 * When enter key is selected move to next field
+		 */
 		firstName.addKeyListener(new KeyAdapter(){
 			
 			public void keyTyped(KeyEvent e){
@@ -430,6 +450,11 @@ public class HealthScreening {
 				}
 			}
 		});
+		/**
+		 * Add checks for textfield for decimal point
+		 * Utilize Backspace, Delete, and Enter keys for field
+		 * Do not allow user to enter in a character that is not a number
+		 */
 		age.addKeyListener(new KeyAdapter(){
 			
 			public void keyTyped(KeyEvent e){
@@ -449,6 +474,11 @@ public class HealthScreening {
 				}
 			}
 		});
+		/**
+		 * Add checks for textfield for decimal point
+		 * Utilize Backspace, Delete, and Enter keys for field
+		 * Do not allow user to enter in a character that is not a number
+		 */
 		weight.addKeyListener(new KeyAdapter(){
 			
 			public void keyTyped(KeyEvent e){
@@ -468,6 +498,11 @@ public class HealthScreening {
 				}
 			}
 		});
+		/*
+		 * Add checks for textfield for decimal point
+		 * Utilize Backspace, Delete, and Enter keys for field
+		 * Do not allow user to enter in a character that is not a number
+		 */
 		feet.addKeyListener(new KeyAdapter(){
 			
 			public void keyTyped(KeyEvent e){
@@ -487,6 +522,11 @@ public class HealthScreening {
 				}
 			}
 		});
+		/*
+		 * Add checks for textfield for decimal point
+		 * Utilize Backspace, Delete, and Enter keys for field
+		 * Do not allow user to enter in a character that is not a number
+		 */
 		inches.addKeyListener(new KeyAdapter(){
 			
 			public void keyTyped(KeyEvent e){
@@ -506,6 +546,11 @@ public class HealthScreening {
 				}
 			}
 		});
+		/*
+		 * Add checks for textfield for decimal point
+		 * Utilize Backspace, Delete, and Enter keys for field
+		 * Do not allow user to enter in a character that is not a number
+		 */
 		cholesterol.addKeyListener(new KeyAdapter(){
 			
 			public void keyTyped(KeyEvent e){
@@ -525,6 +570,11 @@ public class HealthScreening {
 				}
 			}
 		});
+		/*
+		 * Add checks for textfield for decimal point
+		 * Utilize Backspace, Delete, and Enter keys for field
+		 * Do not allow user to enter in a character that is not a number
+		 */
 		systolic.addKeyListener(new KeyAdapter(){
 			
 			public void keyTyped(KeyEvent e){
@@ -544,6 +594,11 @@ public class HealthScreening {
 				}
 			}
 		});
+		/*
+		 * Add checks for textfield for decimal point
+		 * Utilize Backspace, Delete, and Enter keys for field
+		 * Do not allow user to enter in a character that is not a number
+		 */
 		diastolic.addKeyListener(new KeyAdapter(){
 			
 			public void keyTyped(KeyEvent e){
