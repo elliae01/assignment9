@@ -7,7 +7,7 @@ public class PatientSummary {
 		
 	}
 	
-	public void summary(String[]data){
+	public int summary(String[]data){
 		
 		
 		String[]classifications={"DESIRABLE","BORDERLINE","HIGH","UNDERWEIGHT",
@@ -46,7 +46,7 @@ public class PatientSummary {
 		System.out.println("STAGE 2 HYPERTENSION        "+total[10]);
 		System.out.println("HYPERTENSIVE CRISIS         "+total[11]);
 		
-		
+		return sum;
 	}
 
 
