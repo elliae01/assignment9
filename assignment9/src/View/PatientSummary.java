@@ -27,7 +27,7 @@ public class PatientSummary {
 		}
 
 		int sum=total[0]+total[1]+total[2];
-		System.out.println("Health Screening Results\n");
+		System.out.println("\nHealth Screening Results\n");
 		System.out.println(data[2]);
 		System.out.println("Number of Individuals Screened: "+sum);
 		System.out.println("\nTotal Cholesterol\n");
