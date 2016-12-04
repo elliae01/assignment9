@@ -497,7 +497,7 @@ public class HealthScreening {
 				}
 			}
 		});
-		/*
+		/**
 		 * Add checks for textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
@@ -521,7 +521,7 @@ public class HealthScreening {
 				}
 			}
 		});
-		/*
+		/**
 		 * Add checks for textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
@@ -545,7 +545,7 @@ public class HealthScreening {
 				}
 			}
 		});
-		/*
+		/**
 		 * Add checks for textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
@@ -569,7 +569,7 @@ public class HealthScreening {
 				}
 			}
 		});
-		/*
+		/**
 		 * Add checks for textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
@@ -593,7 +593,7 @@ public class HealthScreening {
 				}
 			}
 		});
-		/*
+		/**
 		 * Add checks for textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
