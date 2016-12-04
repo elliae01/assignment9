@@ -356,7 +356,7 @@ public class HealthScreening {
 				}
 				else if(selectedFile==null){
 					System.out.println("no file selected");
-					//System.exit(0);
+
 				}
 
 			}
