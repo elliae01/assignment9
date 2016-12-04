@@ -2,8 +2,8 @@ package test;
 
 import static org.junit.Assert.*;
 
-import assignment9.PiechartWebServiceManager;
-import google_api_tests.CHART_TYPE;
+import View.PiechartWebServiceManager;
+import View.PiechartWebServiceManager.CHART_TYPE;
 
 import org.junit.Test;
 

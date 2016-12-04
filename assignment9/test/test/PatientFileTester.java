@@ -1,6 +1,12 @@
+package test;
+
 import static org.junit.Assert.*;
 
+import java.io.File;
+import java.util.*;
+
 import org.junit.Test;
+
 import Model.PatientFile;
 
 public class PatientFileTester {
@@ -21,10 +27,10 @@ public class PatientFileTester {
 		pf.outFile(outData, date);
 
 		// read that test data back
-		String inData = pf.inFile(new File(pf.pathForDate(date));
+		String inData[] = pf.inFile(new File(pf.pathForDate(date)));
 		
 		// test passes if the read data is the same as the written data
-		if(!Array.equals(outData, inData)) {
+		if(!Arrays.equals(outData, inData)) {
 			fail("inFile did not read the same information");
 		}
 	}
