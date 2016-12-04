@@ -437,6 +437,7 @@ public class HealthScreening {
 				if (e.getKeyChar()=='.'){
 					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
 							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
 				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
 				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
 				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
@@ -455,6 +456,7 @@ public class HealthScreening {
 				if (e.getKeyChar()=='.'){
 					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
 							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
 				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
 				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
 				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
@@ -473,6 +475,7 @@ public class HealthScreening {
 				if (e.getKeyChar()=='.'){
 					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
 							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
 				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
 				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
 				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
@@ -491,6 +494,7 @@ public class HealthScreening {
 				if (e.getKeyChar()=='.'){
 					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
 							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
 				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
 				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
 				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
@@ -509,6 +513,7 @@ public class HealthScreening {
 				if (e.getKeyChar()=='.'){
 					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
 							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
 				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
 				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
 				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
@@ -527,6 +532,7 @@ public class HealthScreening {
 				if (e.getKeyChar()=='.'){
 					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
 							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
 				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
 				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
 				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
@@ -545,6 +551,7 @@ public class HealthScreening {
 				if (e.getKeyChar()=='.'){
 					JOptionPane.showMessageDialog(frmGlenview, "Decimal Not Allowed","Information"
 							,JOptionPane.INFORMATION_MESSAGE);
+					e.setKeyChar('\0');
 				}else if (e.getKeyChar()==KeyEvent.VK_BACK_SPACE){
 				}else if (e.getKeyChar()==KeyEvent.VK_DELETE){
 				}else if (e.getKeyChar()==KeyEvent.VK_ENTER){
