@@ -1,7 +1,7 @@
 package View;
 
 import View.PiechartWebServiceManager;
-import View.CHART_TYPE;
+import View.PiechartWebServiceManager.CHART_TYPE;
 
 
 public class PiechartUIinterface  {

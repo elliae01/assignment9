@@ -9,15 +9,15 @@ import de.toolforge.googlechartwrapper.color.ChartColor;
 import de.toolforge.googlechartwrapper.data.PieChartSlice;
 import de.toolforge.googlechartwrapper.label.ChartTitle;
 
-enum CHART_TYPE
-{
-	totalCholesterol,
-	BMI,
-	bloodPressure
-}
-
 public class PiechartWebServiceManager 
 {
+	public enum CHART_TYPE
+	{
+		totalCholesterol,
+		BMI,
+		bloodPressure
+	}
+
 	private final int CHART_COUNT = 3;
 	private final int WIDTH = 570;
 	private final int HEIGHT = 250;

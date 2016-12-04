@@ -1,7 +1,7 @@
 package test;
 
 import static org.junit.Assert.*;
-import assignment9.BmiCalculator;
+import Model.BmiCalculator;
 
 import org.junit.Test;
 
