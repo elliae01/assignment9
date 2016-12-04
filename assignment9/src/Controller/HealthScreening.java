@@ -51,7 +51,7 @@ public class HealthScreening {
 
 
 	/**
-	 * Launch the application..
+	 * Launch the application...
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -395,7 +395,6 @@ public class HealthScreening {
 				}
 				else if (result == JFileChooser.CANCEL_OPTION) {
 				    System.out.println("Cancel was selected");
-				    btnExport.requestFocus();
 
 				}
 				else if(selectedFile==null){
