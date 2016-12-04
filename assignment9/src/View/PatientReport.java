@@ -3,7 +3,7 @@ package View;
 
 public class PatientReport {
 	
-	String[]data;
+	private String[]data;
 	
 	public PatientReport(String[]data){
 		this.data=data;
