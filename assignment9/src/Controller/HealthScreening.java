@@ -63,7 +63,7 @@ public class HealthScreening {
 					e.printStackTrace();
 				}
 				new File("C:\\Patient_Health_Screen\\").mkdir();
-				new File("C:\\Patient_Health_Screen\\Chart\\").mkdir();
+				new File("C:\\Patient_Health_Screen\\Chart_HTML\\").mkdir();
 			}
 		});
 	}

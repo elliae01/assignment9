@@ -91,7 +91,7 @@ public class PiechartWebServiceManager
 	{
 		try
 		{
-			PrintWriter writer = new PrintWriter("C:\\Patient_Health_Screen\\Chart\\Charts.html", "UTF-8");
+			PrintWriter writer = new PrintWriter("C:\\Patient_Health_Screen\\Chart_HTML\\Charts.html", "UTF-8");
 			
 			writer.println("<!DOCTYPE html");
 			writer.println("<html>");
@@ -132,7 +132,7 @@ public class PiechartWebServiceManager
 			Process process = new ProcessBuilder(
 
 					"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe",
-					"C:\\Patient_Health_Screen\\Chart\\charts.html").start();
+					"C:\\Patient_Health_Screen\\Chart_HTML\\charts.html").start();
 
 					process.getInputStream();
 
