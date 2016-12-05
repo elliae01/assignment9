@@ -17,12 +17,10 @@ public class PatientReport {
 	 */
 	public void report() {
 		
-		System.out.println();
-		
 	    for(int i=0;i<getData().length;i++){
 	        System.out.println(data[i]);
 	    }
-	
+	    System.out.println();
 	    }
 	/**
 	 * Gets patient data

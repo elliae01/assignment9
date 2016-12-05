@@ -357,14 +357,6 @@ public class HealthScreening {
 					PatientSummary sum = new PatientSummary();
 					sum.summary(inFile);
 				}
-				else if (result == JFileChooser.CANCEL_OPTION) {
-				    System.out.println("Cancel was selected");
-				    
-				}
-				else if(selectedFile==null){
-					System.out.println("no file selected");
-
-				}
 
 			}
 		});
@@ -402,15 +394,6 @@ public class HealthScreening {
 					PiechartWebServiceManager ws = new PiechartWebServiceManager();
 					ws.createHTMLFileWithPieCharts(url);
 					ws.launchPiechartWebPage();
-				}
-				else if (result == JFileChooser.CANCEL_OPTION) {
-				    System.out.println("Cancel was selected");
-
-				}
-				else if(selectedFile==null){
-					
-					System.out.println("no file selected");
-					
 				}
 		
 			}
