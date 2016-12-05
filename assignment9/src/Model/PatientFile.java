@@ -28,11 +28,13 @@ public class PatientFile {
 			Writer fileWriter = new FileWriter(pathForDate(date),true);
 			
 			for(int i=0; i < data.length; i++){
-				fileWriter.append(data[i]+"\r\n");
+				fileWriter.append(data[i]);
+				if(i != data.length-1) {
+					fileWriter.append("\r\n");					
+				}
 				
 			}
 			
-			fileWriter.append("\r\n");
 			fileWriter.close();
 			
 		} catch (IOException e1) {

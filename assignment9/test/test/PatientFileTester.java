@@ -23,6 +23,12 @@ public class PatientFileTester {
 		String outData[] = {"aaa", "bbb", "ccc"};
 		String date = "test";
 
+		// outFile appends, so start with a blank file
+		File deleteMe = new File(pf.pathForDate(date));
+		if(deleteMe.exists()) {
+			deleteMe.delete();			
+		}
+		
 		// write the test data
 		pf.outFile(outData, date);
 
