@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.io.File;
 import java.util.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import Model.PatientFile;
