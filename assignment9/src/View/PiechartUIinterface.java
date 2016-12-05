@@ -11,7 +11,14 @@ public class PiechartUIinterface  {
 	public PiechartUIinterface(){
 		
 	}
-	
+	/**
+	 * Takes in patient data for a specific day and
+	 * calculates the totals for each classification.
+	 * Each total is then added to each classification for
+	 * the cholesterol, blood pressure, and BMI pieCharts.
+	 * @param data
+	 * @return totals for classification
+	 */
 	public String[] chartExport(String[]data){
 		
 		String[]classifications={"DESIRABLE","BORDERLINE","HIGH","UNDERWEIGHT",

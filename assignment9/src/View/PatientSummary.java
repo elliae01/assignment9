@@ -6,7 +6,12 @@ public class PatientSummary {
 	public PatientSummary(){
 		
 	}
-	
+	/**
+	 * Takes in patient data for a specific day and
+	 * calculates the totals for each classification.
+	 * @param data
+	 * @return totals for classification
+	 */
 	public int summary(String[]data){
 		
 		

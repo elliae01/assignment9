@@ -4,11 +4,17 @@ package View;
 public class PatientReport {
 	
 	private String[]data;
-	
+	/**
+	 * Takes in individual patient data after the
+	 * Submit button is selected.
+	 * @param data
+	 */
 	public PatientReport(String[]data){
 		this.data=data;
 	}
-	
+	/**
+	 * Prints individual patient data to console.
+	 */
 	public void report() {
 		
 		System.out.println();
@@ -18,6 +24,10 @@ public class PatientReport {
 	    }
 	
 	    }
+	/**
+	 * Gets patient data
+	 * @return patient data
+	 */
     public String[] getData(){
     	return data;
     }

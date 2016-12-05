@@ -4,14 +4,20 @@ public class PatientClassification {
 	String[]cholesterol;
 	String[]BMI;
 	String[]bloodpressure;
-	
+	/**
+	 * Stores classifications in three arrays.
+	 */
 	public PatientClassification(){
 	cholesterol=new String[]{"DESIRABLE","BORDERLINE","HIGH"};
 	BMI=new String[]{"UNDERWEIGHT","NORMAL","OVERWEIGHT","OBESE"};
 	bloodpressure=new String[]{"NORMAL","PREHYPERTENSION","STAGE 1 HYPERTENSION",
 			"STAGE 2 HYPERTENSION","HYPERTENSIVE CRISIS"};
 	}
-
+	/**
+	 * Assigns classification from cholesterol result.
+	 * @param calc
+	 * @return cholesterol classification
+	 */
 	public String Cholesterol(int calc){
 		
 			if(calc<200&&calc>0){
@@ -26,6 +32,11 @@ public class PatientClassification {
 				return "";
 			}	
 	}
+	/**
+	 * Assigns classification from BMI result.
+	 * @param calc
+	 * @return BMI classification
+	 */
 	public String BMI(double calc){
 
 		if(calc<18.5&&calc>0){
@@ -43,6 +54,12 @@ public class PatientClassification {
 			return "";
 		}
 	}
+	/**
+	 * Assigns classification from blood pressure result.
+	 * @param sys
+	 * @param dias
+	 * @return blood pressure classification
+	 */
 	public String bloodPressure(int sys,int dias){
 
 		if(sys<120&&sys>0&&dias<80&&dias>0){

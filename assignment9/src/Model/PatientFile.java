@@ -16,11 +16,19 @@ public class PatientFile {
 	public PatientFile(){
 		
 	}
-
+	/**
+	 * Appends current date to output file.
+	 * @param date
+	 * @return path
+	 */
 	public String pathForDate(String date) {
 		return "C:\\Patient_Health_Screen\\"+date+"_summary.txt";
 	}
-	
+	/**
+	 * Creates output file and appends patient data.
+	 * @param data
+	 * @param date
+	 */
 	public void outFile(String[]data,String date){
 			
 		try {
@@ -44,6 +52,11 @@ public class PatientFile {
 		
 
 	}
+	/**
+	 * Reads input file and stores in array.
+	 * @param selectedFile
+	 * @return array with patient summary
+	 */
 	public String[]inFile(File selectedFile){
 	
 		
