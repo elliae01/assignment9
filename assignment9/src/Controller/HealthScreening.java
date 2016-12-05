@@ -462,7 +462,7 @@ public class HealthScreening {
 			}
 		});
 		/**
-		 * Add checks for textfield for decimal point
+		 * Add checks for age textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
 		 */
@@ -486,7 +486,7 @@ public class HealthScreening {
 			}
 		});
 		/**
-		 * Add checks for textfield for decimal point
+		 * Add checks for weight textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
 		 */
@@ -510,7 +510,7 @@ public class HealthScreening {
 			}
 		});
 		/**
-		 * Add checks for textfield for decimal point
+		 * Add checks for feet textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
 		 */
@@ -534,7 +534,7 @@ public class HealthScreening {
 			}
 		});
 		/**
-		 * Add checks for textfield for decimal point
+		 * Add checks for inches textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
 		 */
@@ -558,7 +558,7 @@ public class HealthScreening {
 			}
 		});
 		/**
-		 * Add checks for textfield for decimal point
+		 * Add checks for cholesterol textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
 		 */
@@ -582,7 +582,7 @@ public class HealthScreening {
 			}
 		});
 		/**
-		 * Add checks for textfield for decimal point
+		 * Add checks for systolic textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
 		 */
@@ -606,7 +606,7 @@ public class HealthScreening {
 			}
 		});
 		/**
-		 * Add checks for textfield for decimal point
+		 * Add checks for diastolic textfield for decimal point
 		 * Utilize Backspace, Delete, and Enter keys for field
 		 * Do not allow user to enter in a character that is not a number
 		 */
