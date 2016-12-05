@@ -400,7 +400,7 @@ public class HealthScreening {
 		});
 		/**
 		 * When the Clear button is selected:
-		 * return all values of the textfields to null.
+		 * return all values of the textfields to null..
 		 */
 		btnClearAll.addActionListener(new ActionListener() {
 

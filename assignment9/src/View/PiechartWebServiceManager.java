@@ -39,7 +39,7 @@ public class PiechartWebServiceManager
 		pieCharts[0].setChartTitle(new ChartTitle("Total Cholesteral"));
 		pieCharts[1].setChartTitle(new ChartTitle("Body Mass Index"));
 		pieCharts[2].setChartTitle(new ChartTitle("Blood Pressure"));
-		pieCharts[0].set3D();
+		//pieCharts[0].set3D();
 		pieCharts[1].set3D();
 		pieCharts[2].set3D();
 	}
