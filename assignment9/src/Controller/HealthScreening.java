@@ -269,6 +269,11 @@ public class HealthScreening {
 				if(diastolic.getText().equals("")){
 					diastolic.setText("0");
 				}
+				int result = JOptionPane.showConfirmDialog(frmGlenview, "Proceed with submission?",
+				        "alert", JOptionPane.OK_CANCEL_OPTION);
+				
+				if(result==0){
+				
 				if(Integer.parseInt(age.getText())>=1&&Integer.parseInt(age.getText())<=110){
 					if(Integer.parseInt(inches.getText())<12){
 				
@@ -326,7 +331,7 @@ public class HealthScreening {
 					JOptionPane.showMessageDialog(frmGlenview, "Invalid entry. Enter age between 1 and 110.", "information",
 							JOptionPane.INFORMATION_MESSAGE);
 				}
-
+				}
 			}
 		});
 		/**
