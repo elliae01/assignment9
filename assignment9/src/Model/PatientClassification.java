@@ -61,7 +61,10 @@ public class PatientClassification {
 	 * @return blood pressure classification
 	 */
 	public String bloodPressure(int sys,int dias){
-
+		
+		if(sys<=0 || dias<=0){
+			return "";
+		}
 		if(sys<120&&sys>0&&dias<80&&dias>0){
 			return bloodpressure[0];
 		}
