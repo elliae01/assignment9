@@ -8,34 +8,34 @@ import View.PatientSummary;
 public class PatientSummaryTester {
 
 	@Test
-	public void test_high() {
+	public void testHigh() {
 		PatientSummary ps = new PatientSummary();
-		
-		String testData[] = {"HIGH", "", ""};
+
+		String[] testData = { "HIGH", "", "" };
 		assertEquals(ps.summary(testData), 1);
 	}
 
 	@Test
-	public void test_everything() {
+	public void testEverything() {
 		PatientSummary ps = new PatientSummary();
-		
-		String testEverything[] = {"DESIRABLE","BORDERLINE","HIGH"};
+
+		String[] testEverything = { "DESIRABLE", "BORDERLINE", "HIGH" };
 		assertEquals(ps.summary(testEverything), 3);
 	}
 
 	@Test
-	public void test_nothing() {
+	public void testNothing() {
 		PatientSummary ps = new PatientSummary();
-		
-		String testData[] = {"", "", ""};
+
+		String[] testData = { "", "", "" };
 		assertEquals(ps.summary(testData), 0);
 	}
 
 	@Test
-	public void test_invalid() {
+	public void testInvalid() {
 		PatientSummary ps = new PatientSummary();
-		
-		String testData[] = {"ZACK", "CODY", "MOSEBY"};
+
+		String[] testData = { "ZACK", "CODY", "MOSEBY" };
 		assertEquals(ps.summary(testData), 0);
 	}
 
