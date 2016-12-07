@@ -271,7 +271,11 @@ public class HealthScreening {
 
 				if (result == 0) {
 
-					if (Integer.parseInt(age.getText()) >= 1 && Integer.parseInt(age.getText()) <= 110) {
+					if (Integer.parseInt(age.getText()) >= 1 && Integer.parseInt(age.getText()) <= 110){
+						if(Integer.parseInt(weight.getText())>=1&&Integer.parseInt(systolic.getText())>=1
+							&&Integer.parseInt(feet.getText())>=1&&Integer.parseInt(cholesterol.getText())>=1
+							&&Integer.parseInt(diastolic.getText())>=1){
+				
 						if (Integer.parseInt(inches.getText()) < 12) {
 
 							BmiCalculator bmi = new BmiCalculator();
@@ -334,10 +338,15 @@ public class HealthScreening {
 									"Invalid entry. Ensure number of inches are less than 12", "information",
 									JOptionPane.INFORMATION_MESSAGE);
 						}
+						}else 
+							JOptionPane.showMessageDialog(frmGlenview,
+									"Invalid entry. Number needs to be greater than zero", "information",
+									JOptionPane.INFORMATION_MESSAGE);
 					} else {
 						JOptionPane.showMessageDialog(frmGlenview, "Invalid entry. Enter age between 1 and 110.",
 								"information", JOptionPane.INFORMATION_MESSAGE);
 					}
+					
 				}
 			}
 		});

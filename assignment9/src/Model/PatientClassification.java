@@ -87,8 +87,7 @@ public class PatientClassification {
 		}
 		if (sys > 180 && dias > 110) {
 			return bloodpressure[4];
-		} else {
-			return "";
-		}
+		} 
+		return "";
 	}
 }
