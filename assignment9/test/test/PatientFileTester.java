@@ -29,7 +29,7 @@ public class PatientFileTester {
 			deleteMe.delete();
 		}
 
-		// write the test data
+		// write the test data.
 		pf.outFile(outData, date);
 
 		// read that test data back
