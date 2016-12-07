@@ -14,7 +14,7 @@ public class PatientFileTester {
 	@Test
 	public void testPathForDate() {
 		PatientFile pf = new PatientFile();
-		assertEquals(pf.pathForDate("test"), "C:\\Patient_Health_Screen\\test_summary.txt");
+		assertEquals(pf.pathForDate("test"), "C:\\Patient_Health_Screen\\test\\test_summary.txt");
 	}
 
 	@Test
