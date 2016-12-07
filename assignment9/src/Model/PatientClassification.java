@@ -70,9 +70,7 @@ public class PatientClassification {
 
 	public String bloodPressure(int sys,int dias){
 		
-		if (sys <=0 || dias <=0) {
-			return "";
-		}
+
 		if (sys < 120 && sys > 0 && dias <80 && dias >0) {
 			return bloodpressure[0];
 		}
@@ -87,7 +85,8 @@ public class PatientClassification {
 		}
 		if (sys > 180 && dias > 110) {
 			return bloodpressure[4];
-		} 
+		} else{
 		return "";
+		}
 	}
 }
