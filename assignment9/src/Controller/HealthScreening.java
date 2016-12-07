@@ -33,7 +33,7 @@ import javax.swing.JFileChooser;
 import java.awt.Color;
 
 /**
- * The Main class of the HealthScreen application. 
+ * The Main class of the HealthScreen application.
  */
 public class HealthScreening {
 
@@ -63,7 +63,6 @@ public class HealthScreening {
 				}
 				new File("C:\\Patient_Health_Screen\\").mkdir();
 				new File("C:\\Patient_Health_Screen\\Chart_HTML\\").mkdir();
-				new File("C:\\Patient_Health_Screen\\Chart_HTML\\test\\").mkdir();
 			}
 		});
 	}
